@@ -1,0 +1,30 @@
+.no-padding {
+    padding: 0!important;
+}
+
+#navbar {
+    position: absolute;
+    top: 0;
+    height: 40px;
+    width: 100%;
+}
+
+#page-content-wrapper {
+    top: 40px;
+}
+
+a.menu-toggle-container span {
+    font-size: 30px;
+    padding: 5px;
+    padding-left: 10px;
+    color: #333;
+}
+
+ul.sidebar-nav {
+    padding-top: 100px;
+}
+
+ul.sidebar-nav li {
+    line-height: 60px;
+}
+
