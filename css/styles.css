@@ -28,3 +28,23 @@ ul.sidebar-nav li {
     line-height: 60px;
 }
 
+.fp-box-container {
+    display: inline-block;
+    position: relative;
+}
+
+.fp-box-container:after {
+    padding-top: 100%;
+    display: block;
+    content: '';
+}
+
+.fp-box {
+    position: absolute;
+    top: 15px;
+    bottom: 15px;
+    right: 15px;
+    left: 15px;
+    background-color: aliceblue;
+}
+

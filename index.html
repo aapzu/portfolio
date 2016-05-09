@@ -14,39 +14,51 @@
 
 <body>
     <div id="wrapper">
-        <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
-                <li>
-                    <a href="#">Who am I?</a>
-                </li>
-                <li>
-                    <a href="#">What can I do?</a>
-                </li>
-                <li>
-                    <a href="#">Where to find me from?</a>
-                </li>
+                <li><a href="#">Who am I?</a></li>
+                <li><a href="#">What can I do?</a></li>
+                <li><a href="#">Where to find me from?</a></li>
             </ul>
         </div>
-        <!-- /#sidebar-wrapper -->
-
-        <!-- Navbar -->
         <div id="navbar">
             <a class="menu-toggle-container" href="#menu-toggle" id="menu-toggle">
                 <span class="fa fa-bars pull-left"/>
             </a>
         </div>
-        <!-- Navbar -->
-
-        <!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container-fluid">
                 <div class="row">
-                    Yeah, this page is going to have some content soon
+                    <div class="col-md-8 col-lg-6 col-lg-offset-1">
+                        <h1>Aapeli Haanpuu</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4 fp-box-container">
+                        <div class="fp-box">
+                            <h2>Lorem</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 fp-box-container">
+                        <div class="fp-box">
+                            <h2>ipsum</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4 col-lg-offset-4 fp-box-container">
+                        <div class="fp-box">
+                            <h2>dolor</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 fp-box-container">
+                        <div class="fp-box">
+                            <h2>sit amet</h2>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- /#page-content-wrapper -->
 
     </div>
     <!-- /#wrapper -->
@@ -56,6 +68,21 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- Underscore -->
+    <script src="js/underscore.js"></script>
+
+    <!-- Backbone -->
+    <script src="js/backbone.js"></script>
+
+    <script src="js/frontpage.js"></script>
+
+    <script>
+        new Frontpage({
+            el: "#page-content-wrapper",
+            FPBoxEl: ".fp-box-container"
+        })
+    </script>
 
     <!-- Menu Toggle Script -->
     <script>
