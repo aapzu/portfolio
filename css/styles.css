@@ -1,3 +1,8 @@
+body {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
 .no-padding {
     padding: 0!important;
 }
@@ -11,12 +16,12 @@
 
 #page-content-wrapper {
     top: 40px;
+    padding-top: 5px;
 }
 
 a.menu-toggle-container span {
     font-size: 30px;
-    padding: 5px;
-    padding-left: 10px;
+    padding: 5px 5px 5px 10px;
     color: #333;
 }
 
@@ -45,6 +50,40 @@ ul.sidebar-nav li {
     bottom: 15px;
     right: 15px;
     left: 15px;
-    background-color: aliceblue;
+    background-color: palevioletred;
 }
 
+.fp-box-title {
+    font-size: 50px;
+    margin-top: 80px;
+    opacity: 0.5;
+    transition: font-size 0.3s ease, margin-top 0.3s ease;
+    transition-delay: 0.3s;
+}
+
+.fp-box:hover .fp-box-title {
+    margin-top: 50px;
+    font-size: 40px;
+    transition-delay: 0.0s;
+}
+
+.fp-box-content {
+    visibility: hidden;
+    margin-top: 30px;
+    padding: 10px;
+    transition: visibility;
+    transition-delay: 0.3s;
+}
+
+.fp-box:hover .fp-box-content,
+.fp-box .fp-box-content:hover {
+    visibility: visible;
+    transition-delay: 0.0s;
+}
+
+@media(min-width:768px) {
+    #wrapper.toggled {
+        padding-left: 125px;
+        padding-right: 125px;
+    }
+}

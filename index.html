@@ -10,6 +10,9 @@
     <link href="css/simple-sidebar.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 </head>
 
 <body>
@@ -33,27 +36,33 @@
                         <h1>Aapeli Haanpuu</h1>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-6 col-lg-4 fp-box-container">
+                <div class="row" id="whoami">
+                    <div class="col-md-6 col-lg-4 fp-box-container col-sm-12 col-xs-12">
                         <div class="fp-box">
-                            <h2>Lorem</h2>
+                            <p class="fp-box-title">Learner</p>
+                            <div class="fp-box-content">
+                                For me, every day is an opportunity to learn something new. I never miss that opportunity.
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4 fp-box-container">
+                    <div class="col-md-6 col-lg-4 fp-box-container col-sm-12 col-xs-12">
                         <div class="fp-box">
-                            <h2>ipsum</h2>
+                            <p class="fp-box-title">Thinker</p>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-lg-4 col-lg-offset-4 fp-box-container">
+                <!--</div>-->
+                <!--<div class="row">-->
+                    <div class="col-md-6 col-lg-4 col-lg-offset-4 fp-box-container col-sm-12 col-xs-12">
                         <div class="fp-box">
-                            <h2>dolor</h2>
+                            <p class="fp-box-title">Imaginer</p>
+                            <div class="fp-box-content">
+                                Quite often, thinking outside the box is the right way to go. And that is my way to go.
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4 fp-box-container">
+                    <div class="col-md-6 col-lg-4 fp-box-container col-sm-12 col-xs-12">
                         <div class="fp-box">
-                            <h2>sit amet</h2>
+                            <p class="fp-box-title">Doer</p>
                         </div>
                     </div>
                 </div>
@@ -62,9 +71,6 @@
 
     </div>
     <!-- /#wrapper -->
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -75,14 +81,6 @@
     <!-- Backbone -->
     <script src="js/backbone.js"></script>
 
-    <script src="js/frontpage.js"></script>
-
-    <script>
-        new Frontpage({
-            el: "#page-content-wrapper",
-            FPBoxEl: ".fp-box-container"
-        })
-    </script>
 
     <!-- Menu Toggle Script -->
     <script>
