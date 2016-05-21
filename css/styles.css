@@ -19,6 +19,10 @@ body {
     padding-top: 5px;
 }
 
+#page-content-wrapper section {
+    margin-bottom: 50px;
+}
+
 a.menu-toggle-container span {
     font-size: 30px;
     padding: 5px 5px 5px 10px;
