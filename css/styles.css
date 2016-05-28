@@ -37,12 +37,13 @@ ul.sidebar-nav li {
     line-height: 60px;
 }
 
-.fp-box-container {
+.square {
     display: inline-block;
     position: relative;
+    padding: 0;
 }
 
-.fp-box-container:after {
+.square:after {
     padding-top: 100%;
     display: block;
     content: '';
@@ -83,6 +84,116 @@ ul.sidebar-nav li {
 .fp-box .fp-box-content:hover {
     visibility: visible;
     transition-delay: 0.0s;
+}
+
+.carousel .carousel-div {
+    height: 400px;
+    width: 100%;
+}
+
+.carousel-indicators {
+    top: -32px;
+    bottom: initial;
+}
+
+.carousel-indicators li {
+    border-color: #000000;
+}
+
+.carousel-indicators li.active {
+    background-color: #000000;
+}
+
+.carousel-info {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(51,51,51,0.6);
+    width: 100%;
+    padding: 10px;
+    transition: background-color 0.5s ease;
+}
+
+.carousel-info p, .carousel-info a {
+    margin-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #FFF;
+}
+
+.carousel-title {
+    font-size: 20px;
+}
+
+.carousel-description {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease;
+}
+
+.carousel:hover .carousel-info {
+    background-color: rgba(51, 51, 51, 0.9);
+}
+
+.carousel:hover .carousel-title {
+    cursor: pointer;
+}
+
+.carousel:hover .carousel-description {
+    max-height: 200px;
+}
+
+.carousel-button  {
+    position: absolute;
+    top: 40%;
+    color: rgba(256, 256, 256, 0.7);
+    font-size: 40px;
+    display: none;
+}
+
+.carousel:hover .carousel-button {
+    display: block;
+}
+
+.carousel-button:hover,
+.carousel-button:active {
+    color: #999;
+}
+
+.carousel-left {
+    left: 10px;
+}
+
+.carousel-right {
+    right: 10px;
+}
+
+.img-div {
+    width: 100%;
+    height: 100%;
+    background: no-repeat 0 0;
+    background-size: auto 100%;
+}
+
+#wheretofindmefrom .contacts {
+    margin-top: 50px;
+    margin-bottom: 90px;
+}
+
+#wheretofindmefrom .contacts div.square a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 150px;
+    transition: font-size 0.5s, color 0.5s;
+    color: #999;
+}
+
+#wheretofindmefrom .contacts div.square a:hover {
+    color: palevioletred;
+    font-size: 200px;
 }
 
 @media(min-width:768px) {
