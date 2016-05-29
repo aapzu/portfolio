@@ -21,6 +21,7 @@ body {
 
 #page-content-wrapper section {
     margin-bottom: 50px;
+    padding-top: 25px;
 }
 
 a.menu-toggle-container span {
@@ -49,12 +50,16 @@ ul.sidebar-nav li {
     content: '';
 }
 
+.fp-box-container:nth-child(n+3) {
+    margin-top: -25px;
+}
+
 .fp-box {
     position: absolute;
-    top: 15px;
-    bottom: 15px;
-    right: 15px;
-    left: 15px;
+    top: 25px;
+    bottom: 25px;
+    right: 25px;
+    left: 25px;
     background-color: palevioletred;
 }
 
@@ -84,87 +89,6 @@ ul.sidebar-nav li {
 .fp-box .fp-box-content:hover {
     visibility: visible;
     transition-delay: 0.0s;
-}
-
-.carousel .carousel-div {
-    height: 400px;
-    width: 100%;
-}
-
-.carousel-indicators {
-    top: -32px;
-    bottom: initial;
-}
-
-.carousel-indicators li {
-    border-color: #000000;
-}
-
-.carousel-indicators li.active {
-    background-color: #000000;
-}
-
-.carousel-info {
-    position: absolute;
-    bottom: 0;
-    background-color: rgba(51,51,51,0.6);
-    width: 100%;
-    padding: 10px;
-    transition: background-color 0.5s ease;
-}
-
-.carousel-info p, .carousel-info a {
-    margin-bottom: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
-    color: #FFF;
-}
-
-.carousel-title {
-    font-size: 20px;
-}
-
-.carousel-description {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.5s ease;
-}
-
-.carousel:hover .carousel-info {
-    background-color: rgba(51, 51, 51, 0.9);
-}
-
-.carousel:hover .carousel-title {
-    cursor: pointer;
-}
-
-.carousel:hover .carousel-description {
-    max-height: 200px;
-}
-
-.carousel-button  {
-    position: absolute;
-    top: 40%;
-    color: rgba(256, 256, 256, 0.7);
-    font-size: 40px;
-    display: none;
-}
-
-.carousel:hover .carousel-button {
-    display: block;
-}
-
-.carousel-button:hover,
-.carousel-button:active {
-    color: #999;
-}
-
-.carousel-left {
-    left: 10px;
-}
-
-.carousel-right {
-    right: 10px;
 }
 
 .img-div {
@@ -197,6 +121,9 @@ ul.sidebar-nav li {
 }
 
 @media(min-width:768px) {
+    #page-content-wrapper section {
+        min-height: 100vh;
+    }
     #wrapper.toggled {
         padding-left: 125px;
         padding-right: 125px;
