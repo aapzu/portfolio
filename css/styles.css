@@ -24,6 +24,10 @@ body {
     padding-top: 25px;
 }
 
+#sidebar-wrapper {
+    z-index: 500;
+}
+
 a.menu-toggle-container span {
     font-size: 30px;
     padding: 5px 5px 5px 10px;

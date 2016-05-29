@@ -19,6 +19,7 @@
 
 .carousel > input[type=checkbox]:checked {
     position: fixed;
+    z-index: 500;
 }
 
 .carousel > input[type=checkbox]:checked + .carousel-inner {
