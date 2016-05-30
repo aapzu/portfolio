@@ -71,7 +71,7 @@ ul.sidebar-nav li {
     font-size: 50px;
     margin-top: 80px;
     transition: font-size 0.3s ease, margin-top 0.3s ease;
-    transition-delay: 0.3s;
+    /*transition-delay: 0.3s;*/
     color: palevioletred;
     filter: none;
     position:relative;
@@ -80,12 +80,14 @@ ul.sidebar-nav li {
 .fp-box:hover .fp-box-title {
     margin-top: 50px;
     font-size: 40px;
-    transition-delay: 0.0s;
+    /*transition-delay: 0.0s;*/
 }
 
 .fp-box:hover .img-div {
-    filter: blur(2px) grayscale(100%);
+    /*filter: blur(2px) grayscale(100%);*/
     -webkit-filter: blur(2px) grayscale(100%);
+    transition: -webkit-filter 0.3s ease;
+    -webkit-transition: -webkit-filter 0.3s ease;
 }
 
 .fp-box-content {
@@ -93,7 +95,7 @@ ul.sidebar-nav li {
     margin-top: 30px;
     padding: 10px;
     transition: visibility;
-    transition-delay: 0.3s;
+    transition-delay: 0.2s;
     position: relative;
     color: #FFFFFF;
     height: 100%;
@@ -109,15 +111,12 @@ ul.sidebar-nav li {
 
 .fp-box .img-div {
     -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
+    /*filter: grayscale(100%);*/
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 0;
-    transition: filter 0.3s ease;
-    -webkit-transition: -webkit-filter 0.3s;
-    transition-delay: 0.3s;
-    -webkit-transition-delay: 0.3s;
+    /*transition-delay: 3s;*/
+    /*-webkit-transition-delay: 3s;*/
 }
 
 .img-div {
