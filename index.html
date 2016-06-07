@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <div id="wrapper">
+    <div id="wrapper" class="toggled">
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li><a href="#whoami">Who am I?</a></li>
@@ -26,12 +26,12 @@
                 <li><a href="#wheretofindmefrom">Where to find me from?</a></li>
             </ul>
         </div>
-        <div id="navbar">
-            <a class="menu-toggle-container" href="#menu-toggle" id="menu-toggle">
-                <span class="fa fa-bars pull-left"></span>
-            </a>
-        </div>
         <div id="page-content-wrapper">
+            <div class="menu-toggle-container" href="#menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <div class="container-fluid">
                 <section id="whoami">
                     <div class="row">
@@ -40,7 +40,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6 col-lg-4 fp-box-container col-sm-12 col-xs-12 square">
+                        <div class="col-sm-6 col-lg-4 fp-box-container col-sm-12 col-xs-12 square">
                             <div class="fp-box">
                                 <div class="img-div" data-background="https://upload.wikimedia.org/wikipedia/commons/4/47/The-interesting-thing-is-owned-by-duck.jpg"></div>
                                 <p class="fp-box-title">Learner</p>
@@ -49,13 +49,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4 fp-box-container col-sm-12 col-xs-12 square">
+                        <div class="col-sm-6 col-lg-4 fp-box-container col-sm-12 col-xs-12 square">
                             <div class="fp-box">
                                 <div class="img-div" data-background="https://c1.staticflickr.com/7/6129/6023596646_7bb898462c_b.jpg"></div>
                                 <p class="fp-box-title">Thinker</p>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4 col-lg-offset-4 fp-box-container col-sm-12 col-xs-12 square">
+                        <div class="col-sm-6 col-lg-4 col-lg-offset-4 fp-box-container col-sm-12 col-xs-12 square">
                             <div class="fp-box">
                                 <div class="img-div" data-background="http://www.publicdomainpictures.net/pictures/60000/nahled/diving-duck.jpg"></div>
                                 <p class="fp-box-title">Imaginer</p>
@@ -64,7 +64,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4 fp-box-container col-sm-12 col-xs-12 square">
+                        <div class="col-sm-6  col-lg-4 fp-box-container col-sm-12 col-xs-12 square">
                             <div class="fp-box">
                                 <div class="img-div" data-background="https://www.timeshighereducation.com/sites/default/files/Pictures/web/u/m/n/duck_0_450.jpg"></div>
                                 <p class="fp-box-title">Doer</p>
@@ -206,6 +206,7 @@
         $(function(){
             $("#menu-toggle").click(function(e) {
                 e.preventDefault();
+                $(this).toggleClass('open');
                 $("#wrapper").toggleClass("toggled");
             })
             $(".img-div").each(function() {
