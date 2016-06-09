@@ -1,0 +1,139 @@
+#menu-toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 30px;
+  height: 27px;
+  margin: 20px 10px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+#menu-toggle span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #999999;
+  border-radius: 1px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out, background-color 0s;
+}
+#menu-toggle:not(.toggled) span {
+  margin-top: -8px;
+}
+@media (max-width: 767px) {
+  #menu-toggle span:nth-child(1) {
+    top: 0;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+  #menu-toggle span:nth-child(2) {
+    top: 10px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+  #menu-toggle span:nth-child(3) {
+    top: 20px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+  #menu-toggle.toggled span:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: -8px;
+    left: 8px;
+  }
+  #menu-toggle.toggled span:nth-child(2) {
+    width: 0;
+    opacity: 0;
+  }
+  #menu-toggle.toggled span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 11px;
+    left: 8px;
+  }
+}
+@media (min-width: 768px) {
+  #wrapper.toggled #menu-toggle {
+    left: 75px;
+    transition-delay: 0.0s;
+    color: #333;
+  }
+  #menu-toggle {
+    position: fixed;
+    left: 180px;
+    transition: left 0.25s ease;
+    transition-delay: 0.25s;
+  }
+  #menu-toggle span {
+    transition: all 0.25s ease;
+  }
+  #menu-toggle.toggled span:nth-child(1) {
+    top: 0;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+  #menu-toggle.toggled span:nth-child(2) {
+    top: 10px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+  #menu-toggle.toggled span:nth-child(3) {
+    top: 20px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+  #menu-toggle:not(.toggled) span:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 17px;
+    left: 8px;
+  }
+  #menu-toggle:not(.toggled) span:nth-child(2) {
+    width: 0%;
+    opacity: 0;
+  }
+  #menu-toggle:not(.toggled) span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 17px;
+    left: 8px;
+  }
+}
