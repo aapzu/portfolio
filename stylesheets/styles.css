@@ -24,69 +24,6 @@ body {
 #sidebar-wrapper ul.sidebar-nav li {
   line-height: 60px;
 }
-#page-content-wrapper #menu-toggle {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  width: 30px;
-  height: 27px;
-  margin: 20px;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: 0.5s ease-in-out;
-  -moz-transition: 0.5s ease-in-out;
-  -o-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-  cursor: pointer;
-}
-#page-content-wrapper #menu-toggle span {
-  display: block;
-  position: absolute;
-  height: 4px;
-  width: 100%;
-  background: #999999;
-  border-radius: 1px;
-  opacity: 1;
-  left: 0;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: 0.25s ease-in-out;
-  -moz-transition: 0.25s ease-in-out;
-  -o-transition: 0.25s ease-in-out;
-  transition: 0.25s ease-in-out, background-color 0s;
-}
-#page-content-wrapper #menu-toggle span:nth-child(1) {
-  top: 0;
-}
-#page-content-wrapper #menu-toggle span:nth-child(2) {
-  top: 10px;
-}
-#page-content-wrapper #menu-toggle span:nth-child(3) {
-  top: 20px;
-}
-#page-content-wrapper #menu-toggle.open span:nth-child(1) {
-  top: 18px;
-  -webkit-transform: rotate(135deg);
-  -moz-transform: rotate(135deg);
-  -o-transform: rotate(135deg);
-  transform: rotate(135deg);
-}
-#page-content-wrapper #menu-toggle.open span:nth-child(2) {
-  opacity: 0;
-  left: -60px;
-}
-#page-content-wrapper #menu-toggle.open span:nth-child(3) {
-  top: 18px;
-  -webkit-transform: rotate(-135deg);
-  -moz-transform: rotate(-135deg);
-  -o-transform: rotate(-135deg);
-  transform: rotate(-135deg);
-}
 #page-content-wrapper section {
   margin-bottom: 50px;
   padding-top: 25px;
@@ -193,7 +130,7 @@ body {
   #page-content-wrapper #menu-toggle {
     position: fixed;
     left: 180px;
-    transition: all 0.25s ease;
+    transition: left 0.25s ease;
     transition-delay: 0.25s;
   }
   #page-content-wrapper #menu-toggle span {

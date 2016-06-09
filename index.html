@@ -7,18 +7,19 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/simple-sidebar.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
-    <link href="css/carousel-styles.css" rel="stylesheet">
-    <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="stylesheets/simple-sidebar.css" rel="stylesheet">
+    <link href="stylesheets/styles.css" rel="stylesheet">
+    <link href="stylesheets/carousel-styles.css" rel="stylesheet">
+    <link href="stylesheets/menu-icon.css" rel="stylesheet">
+    <link href="stylesheets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 </head>
 
 <body>
-    <div id="wrapper" class="toggled">
+    <div id="wrapper" class="">
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li><a href="#whoami">Who am I?</a></li>
@@ -206,7 +207,7 @@
         $(function(){
             $("#menu-toggle").click(function(e) {
                 e.preventDefault();
-                $(this).toggleClass('open');
+                $(this).toggleClass('toggled');
                 $("#wrapper").toggleClass("toggled");
             })
             $(".img-div").each(function() {
