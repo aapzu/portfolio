@@ -89,12 +89,10 @@ body {
 }
 .fp-box .img-div {
   -webkit-filter: grayscale(100%);
-  /*filter: grayscale(100%);*/
+  filter: grayscale(100%);
   position: absolute;
   top: 0;
   left: 0;
-  /*transition-delay: 3s;*/
-  /*-webkit-transition-delay: 3s;*/
 }
 .img-div {
   width: 100%;
@@ -123,9 +121,6 @@ body {
   font-size: 200px;
 }
 @media (min-width: 768px) {
-  #page-content-wrapper section {
-    min-height: 100vh;
-  }
   #page-content-wrapper #menu-toggle {
     position: fixed;
     left: 180px;
