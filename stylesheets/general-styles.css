@@ -1,32 +1,31 @@
 body {
   overflow-y: auto;
   overflow-x: hidden;
+  width: 100%;
+  height: 100%;
 }
 .no-padding {
   padding: 0!important;
+}
+#wrapper {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 #wrapper.toggled {
   padding-left: 0;
 }
 #wrapper.toggled #sidebar-wrapper {
-  margin-right: 0;
+  width: 250px;
 }
 #wrapper.toggled #menu-toggle {
   left: 170px;
 }
-#sidebar-wrapper {
-  z-index: 500;
-  transition-timing-function: ease-out;
-}
-#sidebar-wrapper ul.sidebar-nav {
-  padding-top: 100px;
-}
-#sidebar-wrapper ul.sidebar-nav li {
-  line-height: 60px;
-}
 #page-content-wrapper section {
-  margin-bottom: 50px;
-  padding-top: 25px;
+  margin-bottom: 70px;
+  padding-top: 50px;
 }
 .square {
   display: inline-block;
@@ -38,9 +37,6 @@ body {
   display: block;
   content: '';
 }
-.fp-box-container:nth-child(n+3) {
-  margin-top: -25px;
-}
 .fp-box {
   position: absolute;
   top: 25px;
@@ -49,27 +45,29 @@ body {
   left: 25px;
   overflow: hidden;
 }
+.fp-box:not(.img-container) {
+  background-color: #DB7093;
+}
 .fp-box:hover .fp-box-title {
   margin-top: 20%;
   font-size: 40px;
   transition: font-size 0.3s ease;
 }
 .fp-box:hover .img-div {
-  /*filter: blur(2px) grayscale(100%);*/
+  transform: scale(1.33);
+  filter: blur(10px) grayscale(100%);
   -webkit-filter: blur(2px) grayscale(100%);
-  transition: -webkit-filter 0.3s ease;
-  -webkit-transition: -webkit-filter 0.3s ease;
+  transition: filter, -webkit-filter, transform 3s ease;
 }
 .fp-box:hover .fp-box-content {
   visibility: visible;
   transition-delay: 0.0s;
 }
 .fp-box .fp-box-title {
-  font-size: 50px;
+  font-size: 60px;
   margin-top: 30%;
   transition: font-size 0.3s cubic-bezier(0, 0, 0.38, 1), margin-top 0.3s ease-out;
   /*transition-delay: 0.3s;*/
-  color: palevioletred;
   filter: none;
   position: relative;
 }
@@ -103,6 +101,7 @@ body {
   height: 100%;
   background: no-repeat 0 0;
   background-size: auto 100%;
+  transition: filter, -webkit-filter, transform 1s ease;
 }
 #wheretofindmefrom .contacts {
   margin-top: 50px;
@@ -135,23 +134,5 @@ body {
   }
   #page-content-wrapper #menu-toggle span {
     transition: all 0.25s ease;
-  }
-  #wrapper:not(.toggled) #menu-toggle span {
-    background-color: #999999;
-  }
-  #wrapper:not(.toggled) #menu-toggle:hover span {
-    background-color: #FFFFFF;
-  }
-  #wrapper.toggled {
-    padding-left: 125px;
-    padding-right: 125px;
-  }
-  #wrapper.toggled #sidebar-wrapper {
-    margin-right: -250px;
-  }
-  #wrapper.toggled #page-content-wrapper #menu-toggle {
-    left: 75px;
-    transition-delay: 0.0s;
-    color: #333;
   }
 }

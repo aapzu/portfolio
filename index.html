@@ -7,10 +7,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
-    <link href="stylesheets/simple-sidebar.css" rel="stylesheet">
-    <link href="stylesheets/styles.css" rel="stylesheet">
+    <link href="stylesheets/bootstrap4.min.css" rel="stylesheet">
+    <link href="stylesheets/general-styles.css" rel="stylesheet">
     <link href="stylesheets/carousel-styles.css" rel="stylesheet">
+    <link href="stylesheets/sidebar-styles.css" rel="stylesheet">
     <link href="stylesheets/menu-icon.css" rel="stylesheet">
     <link href="stylesheets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
@@ -27,7 +27,7 @@
                 <li><a href="#wheretofindmefrom">Where to find me from?</a></li>
             </ul>
         </div>
-        <div id="page-content-wrapper">
+        <div id="page-content-wrapper" class="container">
             <div class="menu-toggle-container" href="#menu-toggle" id="menu-toggle">
                 <span></span>
                 <span></span>
@@ -43,7 +43,6 @@
                     <div class="row">
                         <div class="col-sm-6 col-lg-4 fp-box-container col-sm-12 col-xs-12 square">
                             <div class="fp-box">
-                                <div class="img-div" data-background="https://upload.wikimedia.org/wikipedia/commons/4/47/The-interesting-thing-is-owned-by-duck.jpg"></div>
                                 <p class="fp-box-title">Learner</p>
                                 <div class="fp-box-content">
                                     For me, every day is an opportunity to learn something new. I never miss that opportunity.
@@ -51,24 +50,33 @@
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-4 fp-box-container col-sm-12 col-xs-12 square">
-                            <div class="fp-box">
-                                <div class="img-div" data-background="https://c1.staticflickr.com/7/6129/6023596646_7bb898462c_b.jpg"></div>
-                                <p class="fp-box-title">Thinker</p>
+                            <div class="fp-box img-container">
+                                <div class="img-div" data-background="img/Siluetti-square.JPG"></div>
                             </div>
                         </div>
-                        <div class="col-sm-6 col-lg-4 col-lg-offset-4 fp-box-container col-sm-12 col-xs-12 square">
+                        <div class="col-sm-6 col-lg-4 fp-box-container col-sm-12 col-xs-12 square">
                             <div class="fp-box">
-                                <div class="img-div" data-background="http://www.publicdomainpictures.net/pictures/60000/nahled/diving-duck.jpg"></div>
-                                <p class="fp-box-title">Imaginer</p>
+                                <p class="fp-box-title">Thinker</p>
                                 <div class="fp-box-content">
                                     Quite often, thinking outside the box is the right way to go. And that is my way to go.
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-4 fp-box-container col-sm-12 col-xs-12 square">
+                            <div class="fp-box img-container">
+                                <div class="img-div" data-background="img/Kasvokuva1-square.JPG"></div>
+                            </div>
+                        </div>
                         <div class="col-sm-6  col-lg-4 fp-box-container col-sm-12 col-xs-12 square">
                             <div class="fp-box">
-                                <div class="img-div" data-background="https://www.timeshighereducation.com/sites/default/files/Pictures/web/u/m/n/duck_0_450.jpg"></div>
                                 <p class="fp-box-title">Doer</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6  col-lg-4 fp-box-container col-sm-12 col-xs-12 square">
+                            <div class="fp-box img-container">
+                                <div class="img-div" data-background="img/Kasvokuva2-square.JPG"></div>
                             </div>
                         </div>
                     </div>
@@ -93,7 +101,7 @@
                             </p>
                         </div>
                         <div class="col-lg-7">
-                            <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="12000000">
+                            <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="120000">
                                 <!-- Indicators -->
                                 <ol class="carousel-indicators">
                                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -105,7 +113,7 @@
                                 <input type="checkbox">
                                 <!-- Wrapper for slides -->
                                 <div class="carousel-inner" role="listbox">
-                                    <div class="item active">
+                                    <div class="carousel-item active">
                                         <div class="carousel-div">
                                             <div class="img-div" data-background="img/trackitime_screenshot2.png"></div>
                                             <div class="carousel-info">
@@ -117,7 +125,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="item">
+                                    <div class="carousel-item">
                                         <div class="carousel-div">
                                             <div class="img-div" data-background="img/Strends_screenshot.png"></div>
                                             <div class="carousel-info">
@@ -129,7 +137,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="item">
+                                    <div class="carousel-item">
                                         <div class="carousel-div">
                                             <div class="img-div" data-background="img/Foller_screenshot_collage.png"></div>
                                             <div class="carousel-info">
@@ -142,7 +150,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="item">
+                                    <div class="carousel-item">
                                         <div class="carousel-div">
                                             <div class="img-div" data-background="img/Streamr_dashboard_editor_screenshot.png"></div>
                                             <div class="carousel-info">
@@ -192,8 +200,11 @@
     </div>
     <!-- /#wrapper -->
 
+    <!-- Tether -->
+    <script src="js/tether.min.js"></script>
+
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap4.min.js"></script>
 
     <!-- Underscore -->
     <script src="js/underscore.js"></script>

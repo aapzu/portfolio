@@ -1,0 +1,125 @@
+
+.carousel {
+  height: 400px;
+
+  > input[type=checkbox] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 10;
+    top: 0;
+    left: 0;
+
+    &:checked {
+      position: fixed;
+      z-index: 500;
+
+      + .carousel-inner {
+        position: fixed;
+        top: 50px;
+        left: 50px;
+        right: 50px;
+        bottom: 50px;
+        z-index: 1000;
+        width: initial;
+        height: initial;
+
+        .img-div {
+          background-position-x: center;
+        }
+      }
+    }
+  }
+
+  .carousel-inner {
+    background-color: #FFFFFF;
+    height: 100%;
+
+    .carousel-item {
+      height: 100%;
+    }
+  }
+
+  .carousel-div {
+    height: 100%;
+    width: 100%;
+  }
+
+  &:hover {
+    .carousel-info {
+      background-color: rgba(51, 51, 51, 0.9);
+    }
+    .carousel-button {
+      display: block;
+    }
+    .carousel-title {
+      cursor: pointer;
+    }
+    .carousel-description {
+      max-height: 200px;
+    }
+  }
+}
+
+.carousel-indicators {
+  bottom: -40px;
+  z-index: 5;
+
+  li {
+    border-color: #000000;
+
+    &.active {
+      background-color: #000000;
+    }
+  }
+}
+
+.carousel-info {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(51,51,51,0.6);
+  width: 100%;
+  padding: 10px;
+  transition: background-color 0.5s ease;
+  z-index: 20;
+
+  p, a {
+    margin-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #FFF;
+  }
+}
+
+.carousel-title {
+  font-size: 20px;
+}
+
+.carousel-description {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease;
+}
+
+.carousel-button  {
+  position: absolute;
+  top: 40%;
+  color: rgba(256, 256, 256, 0.7);
+  font-size: 40px;
+  display: none;
+  z-index: 20;
+
+  &:hover,
+  &:active {
+    color: #999;
+  }
+}
+
+.carousel-left {
+  left: 10px;
+}
+
+.carousel-right {
+  right: 10px;
+}

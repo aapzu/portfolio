@@ -1,17 +1,27 @@
 body {
     overflow-y: auto;
     overflow-x: hidden;
+    width: 100%;
+    height: 100%;
 }
 
 .no-padding {
     padding: 0!important;
 }
 
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
 #wrapper.toggled {
     padding-left: 0;
 
     #sidebar-wrapper {
-        margin-right: 0;
+        width: 250px;
     }
 
     #menu-toggle  {
@@ -19,25 +29,12 @@ body {
     }
 }
 
-#sidebar-wrapper {
-    z-index: 500;
-    transition-timing-function: ease-out;
 
-    ul.sidebar-nav {
-        padding-top: 100px;
-
-        li {
-            line-height: 60px;
-        }
-    }
-}
 
 #page-content-wrapper {
-
-
     section {
-        margin-bottom: 50px;
-        padding-top: 25px;
+        margin-bottom: 70px;
+        padding-top: 50px;
     }
 }
 
@@ -53,10 +50,6 @@ body {
     }
 }
 
-.fp-box-container:nth-child(n+3) {
-    margin-top: -25px;
-}
-
 .fp-box {
     position: absolute;
     top: 25px;
@@ -64,6 +57,10 @@ body {
     right: 25px;
     left: 25px;
     overflow: hidden;
+
+    &:not(.img-container) {
+        background-color: #DB7093;
+    }
 
     &:hover {
         .fp-box-title {
@@ -73,10 +70,11 @@ body {
             //transition: font-size 0.3s cubic-bezier(0.4, 0, 1, 1);
         }
         .img-div {
-            /*filter: blur(2px) grayscale(100%);*/
+            transform: scale(1.33);
+            filter: blur(10px) grayscale(100%);
             -webkit-filter: blur(2px) grayscale(100%);
-            transition: -webkit-filter 0.3s ease;
-            -webkit-transition: -webkit-filter 0.3s ease;
+            transition: filter, -webkit-filter, transform 3s ease;
+            //-webkit-transition: -webkit-all 3s ease;
         }
         .fp-box-content {
             visibility: visible;
@@ -85,11 +83,10 @@ body {
     }
 
     .fp-box-title {
-        font-size: 50px;
+        font-size: 60px;
         margin-top: 30%;
         transition: font-size 0.3s cubic-bezier(0, 0, 0.38, 1), margin-top 0.3s ease-out;
         /*transition-delay: 0.3s;*/
-        color: palevioletred;
         filter: none;
         position:relative;
     }
@@ -127,6 +124,7 @@ body {
     height: 100%;
     background: no-repeat 0 0;
     background-size: auto 100%;
+    transition: filter, -webkit-filter, transform 1s ease;
 }
 
 #wheretofindmefrom .contacts {
@@ -166,31 +164,12 @@ body {
             }
         }
     }
-    #wrapper:not(.toggled) {
-        #menu-toggle {
-            span {
-                background-color: #999999;
-            }
-            &:hover {
-                span {
-                    background-color: #FFFFFF;
-                }
-            }
-        }
-    }
-    #wrapper.toggled {
-        padding-left: 125px;
-        padding-right: 125px;
-
-        #sidebar-wrapper {
-            margin-right: -250px;
-        }
-        #page-content-wrapper {
-            #menu-toggle {
-                left: 75px;
-                transition-delay: 0.0s;
-                color: #333;
-            }
-        }
-    }
+    //#wrapper.toggled {
+    //    padding-left: 125px;
+    //    padding-right: 125px;
+    //
+    //    #sidebar-wrapper {
+    //        margin-right: -250px;
+    //    }
+    //}
 }
