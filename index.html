@@ -8,6 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Roboto Font -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,100' rel='stylesheet' type='text/css'>
+
     <!-- Bootstrap CSS -->
     <link href="lib/bootstrap/css/bootstrap4.min.css" rel="stylesheet">
 
@@ -15,34 +18,35 @@
     <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Own CSS -->
-    <link href="stylesheets/main.css">
+    <link href="stylesheets/main.css" rel="stylesheet">
 
     <!-- jQuery JS -->
     <script src="lib/jquery/jquery.js"></script>
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#navbar-top">
     <div id="wrapper" class="">
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li><a href="#whoami">Who am I?</a></li>
-                <li><a href="#whatcanido">What can I do?</a></li>
-                <li><a href="#wheretofindmefrom">Where to find me from?</a></li>
-            </ul>
-        </div>
-        <div id="page-content-wrapper" class="container">
-            <div class="menu-toggle-container" href="#menu-toggle" id="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
+        <nav class="navbar navbar-dark bg-inverse navbar-fixed-top visible">
+            <button class="navbar-toggler hidden-sm-up fa fa-bars" type="button" data-toggle="collapse" data-target="#navbar-top">
+            </button>
+            <div class="container navbar-toggleable-xs collapse" id="navbar-top">
+                <a class="navbar-brand" href="#">Aapeli Haanpuu</a>
+                <ul class="nav navbar-nav pull-right">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#who">Who</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#what">What</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#where">Where</a>
+                    </li>
+                </ul>
             </div>
+        </nav>
+        <div id="page-content-wrapper" class="container">
             <div class="container-fluid">
-                <section id="whoami">
-                    <div class="row">
-                        <div class="col-md-8 col-lg-6 col-lg-offset-1">
-                            <h1>Aapeli Haanpuu</h1>
-                        </div>
-                    </div>
+                <section id="who">
                     <div class="row">
                         <div class="col-sm-6 col-lg-4 fp-box-container col-sm-12 col-xs-12 square">
                             <div class="fp-box">
@@ -54,7 +58,7 @@
                         </div>
                         <div class="col-sm-6 col-lg-4 fp-box-container col-sm-12 col-xs-12 square">
                             <div class="fp-box img-container">
-                                <div class="img-div" data-background="img/Siluetti-square.JPG"></div>
+                                <div class="img-div" data-background="img/Siluetti-square_500x500.JPG"></div>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-4 fp-box-container col-sm-12 col-xs-12 square">
@@ -65,11 +69,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
                         <div class="col-sm-6 col-lg-4 fp-box-container col-sm-12 col-xs-12 square">
                             <div class="fp-box img-container">
-                                <div class="img-div" data-background="img/Kasvokuva1-square.JPG"></div>
+                                <div class="img-div" data-background="img/Kasvokuva1-square_500x500.JPG"></div>
                             </div>
                         </div>
                         <div class="col-sm-6  col-lg-4 fp-box-container col-sm-12 col-xs-12 square">
@@ -79,12 +81,12 @@
                         </div>
                         <div class="col-sm-6  col-lg-4 fp-box-container col-sm-12 col-xs-12 square">
                             <div class="fp-box img-container">
-                                <div class="img-div" data-background="img/Kasvokuva2-square.JPG"></div>
+                                <div class="img-div" data-background="img/Kasvokuva2-square_500x500.JPG"></div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section id="whatcanido">
+                <section id="what">
                     <div class="row">
                         <div class="col-md-8 col-lg-6 col-lg-offset-1">
                             <h1>Code and stuff</h1>
@@ -179,7 +181,7 @@
                         </div>
                     </div>
                 </section>
-                <section id="wheretofindmefrom">
+                <section id="where">
                     <div class="row">
                         <div class="col-md-8 col-lg-6 col-lg-offset-1">
                             <h1>Where to find me from?</h1>
@@ -215,28 +217,11 @@
     <!-- Backbone -->
     <script src="lib/backbone/backbone.js"></script>
 
+    <!-- Autohiding Navbar -->
+    <script src="lib/autohidingnavbar/jquery.bootstrap-autohidingnavbar.min.js"></script>
 
-    <!-- Menu Toggle Script -->
-    <script>
-        $(function(){
-            $("#menu-toggle").click(function(e) {
-                e.preventDefault();
-                $(this).toggleClass('toggled');
-                $("#wrapper").toggleClass("toggled");
-            })
-            $(".img-div").each(function() {
-                $(this).css("background-image", 'url(' + $(this).data("background") + ')')
-            })
-            $(".sidebar-nav a[href^='#']").each(function(i, el) {
-                $(el).click(function(e) {
-                    e.preventDefault()
-                    $("html, body").animate({
-                        scrollTop: $($(el).attr("href")).offset().top
-                    }, 500)
-                })
-            })
-        })
-    </script>
+    <!-- Own JS -->
+    <script src="js/basic.js"></script>
 
 </body>
 
