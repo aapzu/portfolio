@@ -1,0 +1,19 @@
+#where .contacts {
+  margin-top: 50px;
+  margin-bottom: 90px;
+}
+#where .contacts div.square a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 150px;
+  transition: font-size 0.5s, color 0.5s;
+  color: #999;
+}
+#where .contacts div.square a:hover {
+  color: palevioletred;
+  font-size: 200px;
+}
