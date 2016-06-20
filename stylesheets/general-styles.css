@@ -9,6 +9,17 @@ body {
 .no-padding {
   padding: 0!important;
 }
+.bg-black {
+  background-color: #000000;
+}
+.centered-x {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.centered-y {
+  top: 50%;
+  transform: translateY(-50%);
+}
 #wrapper {
   padding-left: 0;
   -webkit-transition: all 0.5s ease;

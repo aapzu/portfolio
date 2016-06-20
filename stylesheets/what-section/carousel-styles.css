@@ -1,0 +1,128 @@
+.carousel {
+  height: 400px;
+}
+.carousel.open {
+  position: fixed;
+  z-index: 500;
+}
+.carousel.open .carousel-backdrop {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.carousel.open .carousel-inner {
+  position: fixed;
+  top: 50px;
+  bottom: 50px;
+  z-index: 1000;
+  width: initial;
+  height: initial;
+}
+.carousel.open .carousel-inner .img-div {
+  background-position-x: center;
+}
+.carousel.open .carousel-inner img {
+  height: 100%;
+  width: auto;
+  max-width: initial;
+}
+.carousel.open .carousel-button {
+  display: block;
+  position: fixed;
+  top: 40%;
+  color: #FFFFFF;
+  z-index: 2000;
+}
+.carousel.open .carousel-button.carousel-left {
+  left: 35px;
+}
+.carousel.open .carousel-button.carousel-right {
+  right: 35px;
+}
+.carousel .carousel-inner {
+  background-color: #FFFFFF;
+  height: 100%;
+}
+.carousel .carousel-inner .carousel-item {
+  height: 100%;
+}
+.carousel .carousel-backdrop {
+  display: none;
+}
+.carousel .fullscreen-btn {
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+}
+.carousel .carousel-div {
+  height: 100%;
+  width: 100%;
+}
+.carousel:hover .carousel-info {
+  background-color: rgba(51, 51, 51, 0.9);
+}
+.carousel:hover .carousel-button {
+  display: block;
+}
+.carousel:hover .carousel-title {
+  cursor: pointer;
+}
+.carousel:hover .carousel-description {
+  max-height: 200px;
+}
+.carousel-indicators {
+  bottom: -40px;
+  z-index: 5;
+}
+.carousel-indicators li {
+  border-color: #000000;
+}
+.carousel-indicators li.active {
+  background-color: #000000;
+}
+.carousel-info {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(51, 51, 51, 0.6);
+  width: 100%;
+  padding: 10px;
+  transition: background-color 0.5s ease;
+  z-index: 20;
+}
+.carousel-info p,
+.carousel-info a {
+  margin-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #FFF;
+}
+.carousel-title {
+  font-size: 20px;
+}
+.carousel-description {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease;
+}
+.carousel-button {
+  position: absolute;
+  top: 40%;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 40px;
+  display: none;
+  z-index: 20;
+}
+.carousel-button:hover,
+.carousel-button:active {
+  color: #999;
+}
+.carousel-left {
+  left: 10px;
+}
+.carousel-right {
+  right: 10px;
+}

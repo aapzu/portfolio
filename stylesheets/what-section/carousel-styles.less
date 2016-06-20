@@ -2,32 +2,50 @@
 .carousel {
   height: 400px;
 
-  > input[type=checkbox] {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    z-index: 10;
-    top: 0;
-    left: 0;
+  // Open "modal"
+  &.open {
+    position: fixed;
+    z-index: 500;
 
-    &:checked {
+    .carousel-backdrop {
+      display: block;
       position: fixed;
-      z-index: 500;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
 
-      + .carousel-inner {
-        position: fixed;
-        top: 50px;
-        left: 50px;
-        right: 50px;
-        bottom: 50px;
-        z-index: 1000;
-        width: initial;
-        height: initial;
+    .carousel-inner {
+      position: fixed;
+      top: 50px;
+      bottom: 50px;
+      z-index: 1000;
+      width: initial;
+      height: initial;
 
-        .img-div {
-          background-position-x: center;
-        }
+      .img-div {
+        background-position-x: center;
+      }
+
+      img {
+        height: 100%;
+        width: auto;
+        max-width: initial;
+      }
+    }
+    .carousel-button {
+      display: block;
+      position: fixed;
+      top: 40%;
+      color: #FFFFFF;
+      z-index: 2000;
+      &.carousel-left {
+        left: 35px;
+      }
+      &.carousel-right {
+        right: 35px;
       }
     }
   }
@@ -39,6 +57,16 @@
     .carousel-item {
       height: 100%;
     }
+  }
+
+  .carousel-backdrop {
+    display: none;
+  }
+
+  .fullscreen-btn {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
   }
 
   .carousel-div {

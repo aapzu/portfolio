@@ -2,10 +2,11 @@
 #who {
   .fp-box {
     position: absolute;
-    top: 25px;
-    bottom: 25px;
-    right: 25px;
-    left: 25px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 25px;
     overflow: hidden;
 
     &:not(.img-container) {
@@ -13,22 +14,11 @@
     }
 
     &:hover {
-      .fp-box-title {
-        margin-top: 20%;
-        font-size: 40px;
-        transition: font-size 0.3s ease;
-        //transition: font-size 0.3s cubic-bezier(0.4, 0, 1, 1);
-      }
       .img-div {
         transform: scale(1.33);
         filter: blur(10px) grayscale(100%);
         -webkit-filter: blur(2px) grayscale(100%);
         transition: filter, -webkit-filter, transform 3s ease;
-        //-webkit-transition: -webkit-all 3s ease;
-      }
-      .fp-box-content {
-        visibility: visible;
-        transition-delay: 0.0s;
       }
     }
 
@@ -36,9 +26,7 @@
       font-size: 60px;
       margin-top: 30%;
       transition: font-size 0.3s cubic-bezier(0, 0, 0.38, 1), margin-top 0.3s ease-out;
-      /*transition-delay: 0.3s;*/
-      filter: none;
-      position:relative;
+      //position:relative;
     }
 
     .fp-box-content {
@@ -64,6 +52,34 @@
       position: absolute;
       top: 0;
       left: 0;
+    }
+  }
+}
+
+@media(min-width: 544px) {
+  #who {
+    .fp-box:hover {
+      .fp-box-title {
+        margin-top: 20%;
+        font-size: 40px;
+        transition: font-size 0.3s ease;
+        //transition: font-size 0.3s cubic-bezier(0.4, 0, 1, 1);
+      }
+      .fp-box-content {
+        visibility: visible;
+        transition-delay: 0.0s;
+      }
+    }
+  }
+}
+
+@media(max-width: 544px) {
+  #who {
+    .fp-box {
+      margin: 10px;
+      .fp-box-title {
+        font-size: 40px;
+      }
     }
   }
 }

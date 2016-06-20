@@ -4,9 +4,6 @@
 }
 #where .contacts div.square a {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%);
   text-decoration: none;
   cursor: pointer;
   font-size: 150px;

@@ -9,6 +9,17 @@ body {
 .no-padding {
   padding: 0!important;
 }
+.bg-black {
+  background-color: #000000;
+}
+.centered-x {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.centered-y {
+  top: 50%;
+  transform: translateY(-50%);
+}
 #wrapper {
   padding-left: 0;
   -webkit-transition: all 0.5s ease;
@@ -48,19 +59,15 @@ body {
 }
 #who .fp-box {
   position: absolute;
-  top: 25px;
-  bottom: 25px;
-  right: 25px;
-  left: 25px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 25px;
   overflow: hidden;
 }
 #who .fp-box:not(.img-container) {
   background-color: #DB7093;
-}
-#who .fp-box:hover .fp-box-title {
-  margin-top: 20%;
-  font-size: 40px;
-  transition: font-size 0.3s ease;
 }
 #who .fp-box:hover .img-div {
   transform: scale(1.33);
@@ -68,17 +75,10 @@ body {
   -webkit-filter: blur(2px) grayscale(100%);
   transition: filter, -webkit-filter, transform 3s ease;
 }
-#who .fp-box:hover .fp-box-content {
-  visibility: visible;
-  transition-delay: 0.0s;
-}
 #who .fp-box .fp-box-title {
   font-size: 60px;
   margin-top: 30%;
   transition: font-size 0.3s cubic-bezier(0, 0, 0.38, 1), margin-top 0.3s ease-out;
-  /*transition-delay: 0.3s;*/
-  filter: none;
-  position: relative;
 }
 #who .fp-box .fp-box-content {
   visibility: hidden;
@@ -103,34 +103,69 @@ body {
   top: 0;
   left: 0;
 }
+@media (min-width: 544px) {
+  #who .fp-box:hover .fp-box-title {
+    margin-top: 20%;
+    font-size: 40px;
+    transition: font-size 0.3s ease;
+  }
+  #who .fp-box:hover .fp-box-content {
+    visibility: visible;
+    transition-delay: 0.0s;
+  }
+}
+@media (max-width: 544px) {
+  #who .fp-box {
+    margin: 10px;
+  }
+  #who .fp-box .fp-box-title {
+    font-size: 40px;
+  }
+}
 .carousel {
   height: 400px;
 }
-.carousel > input[type=checkbox] {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  z-index: 10;
-  top: 0;
-  left: 0;
-}
-.carousel > input[type=checkbox]:checked {
+.carousel.open {
   position: fixed;
   z-index: 500;
 }
-.carousel > input[type=checkbox]:checked + .carousel-inner {
+.carousel.open .carousel-backdrop {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.carousel.open .carousel-inner {
   position: fixed;
   top: 50px;
-  left: 50px;
-  right: 50px;
   bottom: 50px;
   z-index: 1000;
   width: initial;
   height: initial;
 }
-.carousel > input[type=checkbox]:checked + .carousel-inner .img-div {
+.carousel.open .carousel-inner .img-div {
   background-position-x: center;
+}
+.carousel.open .carousel-inner img {
+  height: 100%;
+  width: auto;
+  max-width: initial;
+}
+.carousel.open .carousel-button {
+  display: block;
+  position: fixed;
+  top: 40%;
+  color: #FFFFFF;
+  z-index: 2000;
+}
+.carousel.open .carousel-button.carousel-left {
+  left: 35px;
+}
+.carousel.open .carousel-button.carousel-right {
+  right: 35px;
 }
 .carousel .carousel-inner {
   background-color: #FFFFFF;
@@ -138,6 +173,14 @@ body {
 }
 .carousel .carousel-inner .carousel-item {
   height: 100%;
+}
+.carousel .carousel-backdrop {
+  display: none;
+}
+.carousel .fullscreen-btn {
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
 }
 .carousel .carousel-div {
   height: 100%;
@@ -213,9 +256,6 @@ body {
 }
 #where .contacts div.square a {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%);
   text-decoration: none;
   cursor: pointer;
   font-size: 150px;
