@@ -6,7 +6,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
     <!-- Roboto Font -->
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,100' rel='stylesheet' type='text/css'>
@@ -27,9 +27,7 @@
 <body data-spy="scroll" data-target="#navbar-top">
     <div id="wrapper" class="">
         <nav class="navbar navbar-dark bg-black navbar-fixed-top visible">
-            <button class="navbar-toggler hidden-sm-up fa fa-bars" type="button" data-toggle="collapse" data-target="#navbar-top">
-            </button>
-            <div class="container navbar-toggleable-xs collapse" id="navbar-top">
+            <div class="container" id="navbar-top">
                 <a class="navbar-brand" href="#">Aapeli Haanpuu</a>
                 <ul class="nav navbar-nav pull-right">
                     <li class="nav-item">
@@ -114,10 +112,10 @@
                                     <li data-target="#myCarousel" data-slide-to="2"></li>
                                     <li data-target="#myCarousel" data-slide-to="3"></li>
                                 </ol>
-                                <div class="carousel-backdrop"></div>
+                                <div class="carousel-backdrop fa fa-times"></div>
                                 <!-- Wrapper for slides -->
-                                Some of my projects
-                                <i class="fullscreen-btn fa fa-expand pull-right hidden-xs"></i>
+                                Some of my projects:
+                                <i class="fullscreen-btn fa fa-expand pull-right hidden-xs-down"></i>
                                 <div class="carousel-inner centered-x" role="listbox">
                                     <div class="carousel-item active">
                                         <!--<div class="carousel-div">-->
@@ -191,18 +189,24 @@
                     </div>
                     <div class="row contacts">
                         <div class="col-md-6 col-lg-4 col-sm-12 col-xs-12 square">
-                            <a href="mailto:aapeli.haanpuu@iki.fi" class="fa fa-envelope-square centered-x centered-y"></a>
+                            <a href="mailto:aapeli.haanpuu@iki.fi" class="fa fa-envelope-square centered-y"></a>
                         </div>
                         <div class="col-md-6 col-lg-4 col-sm-12 col-xs-12 square">
-                            <a href="https://www.github.com/Aapzu" class="fa fa-github-square centered-x centered-y"></a>
+                            <a href="https://www.github.com/Aapzu" class="fa fa-github-square centered-y"></a>
                         </div>
                         <div class="col-md-6 col-lg-4 col-sm-12 col-xs-12 square">
-                            <a href="https://www.linkedin.com/in/aapeli-haanpuu-7133029b" class="fa fa-linkedin-square centered-x centered-y"></a>
+                            <a href="https://www.linkedin.com/in/aapeli-haanpuu-7133029b" class="fa fa-linkedin-square centered-y"></a>
                         </div>
                     </div>
                 </section>
             </div>
         </div>
+        <footer class="footer">
+            <div class="container">
+                <span class="text-muted pull-left">Aapeli Haanpuu</span>
+                <span class="text-muted pull-right">2016</span>
+            </div>
+        </footer>
     </div>
     <!-- /#wrapper -->
 

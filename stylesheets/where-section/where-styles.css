@@ -1,3 +1,6 @@
+#where {
+  height: 90vh;
+}
 #where .contacts {
   margin-top: 50px;
   margin-bottom: 90px;
@@ -9,6 +12,8 @@
   font-size: 150px;
   transition: font-size 0.5s, color 0.5s;
   color: #999;
+  width: 100%;
+  text-align: center;
 }
 #where .contacts div.square a:hover {
   color: palevioletred;

@@ -48,6 +48,16 @@ body {
   background-size: auto 100%;
   transition: filter, -webkit-filter, transform 1s ease;
 }
+footer.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+}
+footer.footer .container {
+  border-top: 1px solid #999999;
+  padding-top: 10px;
+}
 @media (min-width: 768px) {
   nav.navbar {
     top: -54px;
@@ -55,6 +65,11 @@ body {
   }
   nav.navbar.visible {
     top: 0;
+  }
+}
+@media (max-width: 544px) {
+  nav.navbar .nav-item + .nav-item {
+    margin-left: 0.5rem;
   }
 }
 #who .fp-box {
@@ -137,6 +152,14 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
+}
+.carousel.open .carousel-backdrop:before {
+  position: fixed;
+  top: 15px;
+  right: 42.5px;
+  color: #FFFFFF;
+  font-size: 25px;
+  cursor: pointer;
 }
 .carousel.open .carousel-inner {
   position: fixed;
@@ -250,6 +273,21 @@ body {
 .carousel-right {
   right: 10px;
 }
+@media (max-width: 544px) {
+  .carousel {
+    height: initial;
+    max-height: 400px;
+  }
+  .carousel .carousel-button {
+    display: block;
+    color: #333;
+    top: initial;
+    bottom: -55px;
+  }
+}
+#where {
+  height: 90vh;
+}
 #where .contacts {
   margin-top: 50px;
   margin-bottom: 90px;
@@ -261,6 +299,8 @@ body {
   font-size: 150px;
   transition: font-size 0.5s, color 0.5s;
   color: #999;
+  width: 100%;
+  text-align: center;
 }
 #where .contacts div.square a:hover {
   color: palevioletred;

@@ -14,6 +14,14 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
 }
+.carousel.open .carousel-backdrop:before {
+  position: fixed;
+  top: 15px;
+  right: 42.5px;
+  color: #FFFFFF;
+  font-size: 25px;
+  cursor: pointer;
+}
 .carousel.open .carousel-inner {
   position: fixed;
   top: 50px;
@@ -125,4 +133,16 @@
 }
 .carousel-right {
   right: 10px;
+}
+@media (max-width: 544px) {
+  .carousel {
+    height: initial;
+    max-height: 400px;
+  }
+  .carousel .carousel-button {
+    display: block;
+    color: #333;
+    top: initial;
+    bottom: -55px;
+  }
 }
