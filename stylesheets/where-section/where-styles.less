@@ -1,22 +1,35 @@
 #where {
  .contacts {
-   margin-top: 50px;
-   margin-bottom: 90px;
+   padding-top: 50px;
+   padding-bottom: 120px;
 
-   div.square a {
+   div.contact-block a {
      position: absolute;
      text-decoration: none;
      cursor: pointer;
      font-size: 150px;
      transition: font-size 0.5s, color 0.5s;
-     color: #999;
+     color: @font-color-light;
      width: 100%;
      text-align: center;
 
      &:hover {
-       color: palevioletred;
+       color: @base-color;
        font-size: 200px;
      }
    }
  }
+}
+
+@media(max-width: 544px) {
+  #where {
+    .contacts div.contact-block {
+      &:after {
+        padding-top: 50%;
+      }
+      a {
+        font-size: 100px;
+      }
+    }
+  }
 }

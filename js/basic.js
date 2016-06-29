@@ -1,10 +1,11 @@
 $(function(){
-    $(window).on("scrollstop", function() {
-        var s = $("body").scrollTop()
-        if (s < 10) {
-            $("nav.navbar.navbar-brand").hide()
-        } else {
-            $("nav.navbar.navbar-brand").show()
+
+    $(window).scroll(function(){
+        if($(window).scrollTop() > 100){
+            $(".navbar-brand").fadeIn(300);
+        }
+        else{
+            $(".navbar-brand").fadeOut(300);
         }
     })
 

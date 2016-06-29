@@ -1,5 +1,5 @@
 body {
-    background-color: #f5f5f5;
+    background-color: @background-color;
     position: relative;
     overflow-y: auto;
     overflow-x: hidden;
@@ -26,11 +26,13 @@ body {
     transform: translateY(-50%);
 }
 
-nav.navbar .navbar-nav li.nav-item a.nav-link {
-    color: #FFFFFF;
+nav.navbar {
+    .navbar-nav li.nav-item a.nav-link {
+        color: #FFFFFF;
 
-    &:hover {
-        color: palevioletred;
+        &:hover {
+            color: @base-color;
+        }
     }
 }
 

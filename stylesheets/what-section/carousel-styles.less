@@ -34,10 +34,6 @@
       width: initial;
       height: initial;
 
-      .img-div {
-        background-position-x: center;
-      }
-
       img {
         height: 100%;
         width: auto;
@@ -73,9 +69,13 @@
   }
 
   .fullscreen-btn {
-    color: #333;
+    color: @font-color;
     text-decoration: none;
     cursor: pointer;
+
+    &:hover {
+      color: @font-color-light;
+    }
   }
 
   .carousel-div {
@@ -149,7 +149,7 @@
 
   &:hover,
   &:active {
-    color: #999;
+    color: @font-color-light;
   }
 }
 
@@ -168,7 +168,7 @@
 
     .carousel-button {
       display: block;
-      color: #333;
+      color: @font-color;
       top: initial;
       bottom: -55px;
     }

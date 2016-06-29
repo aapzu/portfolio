@@ -25,7 +25,7 @@ nav.navbar .navbar-nav li.nav-item a.nav-link {
   color: #FFFFFF;
 }
 nav.navbar .navbar-nav li.nav-item a.nav-link:hover {
-  color: palevioletred;
+  color: rgba(236, 64, 102, 0.9);
 }
 #wrapper {
   padding-left: 0;
@@ -88,7 +88,7 @@ footer.footer .container {
   overflow: hidden;
 }
 #who .fp-box:not(.img-container) {
-  background-color: #DB7093;
+  background-color: rgba(236, 64, 102, 0.9);
 }
 #who .fp-box:hover img {
   transform: scale(1.33);
@@ -150,6 +150,7 @@ footer.footer .container {
     float: right;
     text-align: right;
     width: 58%;
+    color: #50525a;
   }
 }
 @media (max-width: 544px) {
@@ -207,9 +208,6 @@ footer.footer .container {
   width: initial;
   height: initial;
 }
-.carousel.open .carousel-inner .img-div {
-  background-position-x: center;
-}
 .carousel.open .carousel-inner img {
   height: 100%;
   width: auto;
@@ -242,6 +240,9 @@ footer.footer .container {
   color: #333;
   text-decoration: none;
   cursor: pointer;
+}
+.carousel .fullscreen-btn:hover {
+  color: #999;
 }
 .carousel .carousel-div {
   height: 100%;
@@ -327,10 +328,10 @@ footer.footer .container {
   }
 }
 #where .contacts {
-  margin-top: 50px;
-  margin-bottom: 90px;
+  padding-top: 50px;
+  padding-bottom: 120px;
 }
-#where .contacts div.square a {
+#where .contacts div.contact-block a {
   position: absolute;
   text-decoration: none;
   cursor: pointer;
@@ -340,7 +341,15 @@ footer.footer .container {
   width: 100%;
   text-align: center;
 }
-#where .contacts div.square a:hover {
-  color: palevioletred;
+#where .contacts div.contact-block a:hover {
+  color: rgba(236, 64, 102, 0.9);
   font-size: 200px;
+}
+@media (max-width: 544px) {
+  #where .contacts div.contact-block:after {
+    padding-top: 50%;
+  }
+  #where .contacts div.contact-block a {
+    font-size: 100px;
+  }
 }
