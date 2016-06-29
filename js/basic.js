@@ -1,15 +1,24 @@
 $(function(){
-    $(".img-div").each(function() {
-        $(this).css("background-image", 'url(' + $(this).data("background") + ')')
+    $(window).on("scrollstop", function() {
+        var s = $("body").scrollTop()
+        if (s < 10) {
+            $("nav.navbar.navbar-brand").hide()
+        } else {
+            $("nav.navbar.navbar-brand").show()
+        }
     })
 
     // Scrolling effect
     $(".navbar a[href^='#']").each(function(i, el) {
         $(el).click(function(e) {
             e.preventDefault()
+            $("nav.navbar").autoHidingNavbar("setDisableAutohide", true)
             $("html, body").animate({
                 scrollTop: $($(el).attr("href")).offset().top
             }, 500)
+            setTimeout(function() {
+                $("nav.navbar").autoHidingNavbar("setDisableAutohide", false)
+            }, 600)
         })
     })
 
@@ -17,14 +26,28 @@ $(function(){
     $("nav.navbar").autoHidingNavbar()
 
     // Carousel
-    $("#myCarousel .fullscreen-btn").click(function() {
-        $("#myCarousel").addClass("open")
+    $("#photoCarousel .fullscreen-btn").click(function() {
+        $("#photoCarousel").addClass("open")
         $("body").addClass("modal-open")
         $("nav.navbar").hide()
     })
-    $("#myCarousel .carousel-backdrop").click(function() {
-        $("#myCarousel").removeClass("open")
+    $("#photoCarousel .carousel-backdrop").click(function() {
+        $("#photoCarousel").removeClass("open")
         $("body").removeClass("modal-open")
         $("nav.navbar").show()
+        $(".carousel-item").width("initial")
+    })
+
+    $("#photoCarousel").on("slide.bs.carousel", function(e) {
+        if ($("#photoCarousel").hasClass("open")) {
+            var elementFrom = $(".carousel-item.active")
+            var elementTo = $(e.relatedTarget)
+            var originalWidth = elementFrom.width()
+            elementFrom.animate({
+                width: elementTo.width()
+            }, 600, undefined, function() {
+                elementFrom.width(originalWidth)
+            })
+        }
     })
 })

@@ -1,5 +1,10 @@
 
 #who {
+  .fp-box-row {
+    margin-left: -25px;
+    margin-right: -25px;
+  }
+
   .fp-box {
     position: absolute;
     top: 0;
@@ -14,7 +19,7 @@
     }
 
     &:hover {
-      .img-div {
+      img {
         transform: scale(1.33);
         filter: blur(10px) grayscale(100%);
         -webkit-filter: blur(2px) grayscale(100%);
@@ -26,13 +31,12 @@
       font-size: 60px;
       margin-top: 30%;
       transition: font-size 0.3s cubic-bezier(0, 0, 0.38, 1), margin-top 0.3s ease-out;
-      //position:relative;
+      padding-left: 25px;
     }
 
     .fp-box-content {
       visibility: hidden;
-      margin-top: 30px;
-      padding: 10px;
+      padding: 20px;
       transition: visibility;
       transition-delay: 0.2s;
       position: relative;
@@ -46,12 +50,28 @@
       }
     }
 
-    .img-div {
+    img {
       -webkit-filter: grayscale(100%);
       filter: grayscale(100%);
-      position: absolute;
-      top: 0;
-      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .title-row {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    .name {
+      font-size: 80px;
+
+      p:first-child {
+        margin-bottom: -30px;
+      }
+    }
+
+    .description p {
+      line-height: 2rem;
     }
   }
 }
@@ -60,7 +80,7 @@
   #who {
     .fp-box:hover {
       .fp-box-title {
-        margin-top: 20%;
+        margin-top: 25%;
         font-size: 40px;
         transition: font-size 0.3s ease;
         //transition: font-size 0.3s cubic-bezier(0.4, 0, 1, 1);
@@ -70,15 +90,35 @@
         transition-delay: 0.0s;
       }
     }
+    .title-row {
+      .description p {
+        float: right;
+        text-align: right;
+        width: 58%;
+      }
+    }
   }
 }
 
 @media(max-width: 544px) {
   #who {
+    .fp-box-row {
+      margin-left: -10px;
+      margin-right: -10px;
+    }
     .fp-box {
       margin: 10px;
       .fp-box-title {
-        font-size: 40px;
+        font-size: 30px;
+        padding-left: 10px;
+      }
+    }
+    .title-row {
+      padding-top: 30px;
+      padding-bottom: 30px;
+
+      .name {
+        font-size: 60px;
       }
     }
   }
