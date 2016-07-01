@@ -3,6 +3,7 @@
   .fp-box-row {
     margin-left: -25px;
     margin-right: -25px;
+    margin-bottom: 25px;
   }
 
   .fp-box {
@@ -36,6 +37,7 @@
 
     .fp-box-content {
       visibility: hidden;
+      text-align: justify;
       padding: 20px;
       transition: visibility;
       transition-delay: 0.2s;
@@ -76,26 +78,14 @@
   }
 }
 
-@media(min-width: 544px) {
+@media(max-width: 1200px) {
   #who {
-    .fp-box:hover {
+    .fp-box {
       .fp-box-title {
-        margin-top: 25%;
-        font-size: 40px;
-        transition: font-size 0.3s ease;
-        //transition: font-size 0.3s cubic-bezier(0.4, 0, 1, 1);
+        font-size: 50px;
       }
       .fp-box-content {
-        visibility: visible;
-        transition-delay: 0.0s;
-      }
-    }
-    .title-row {
-      .description p {
-        float: right;
-        text-align: right;
-        width: 58%;
-        color: #50525a;
+        font-size: 14px;
       }
     }
   }
@@ -121,6 +111,43 @@
       .name {
         font-size: 60px;
       }
+    }
+  }
+}
+
+@media(min-width: 544px) {
+  #who {
+    .fp-box:hover {
+      .fp-box-title {
+        margin-top: 15%;
+        font-size: 40px;
+        transition: font-size 0.3s ease;
+        //transition: font-size 0.3s cubic-bezier(0.4, 0, 1, 1);
+      }
+      .fp-box-content {
+        visibility: visible;
+        transition-delay: 0.0s;
+      }
+    }
+  }
+}
+@media(min-width: 768px) {
+  #who {
+    .title-row {
+      .description p {
+        float: right;
+        text-align: right;
+        width: 58%;
+        color: #50525a;
+      }
+    }
+  }
+}
+
+@media(min-width: 544px) and (max-width: 768px) {
+  #who {
+    .fp-box {
+      margin: 15px;
     }
   }
 }
