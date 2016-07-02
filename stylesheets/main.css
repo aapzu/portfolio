@@ -193,6 +193,11 @@ footer.footer .container {
 #what .row.title-row {
   margin-bottom: 20px;
 }
+#what .streamr-logo {
+  height: 1em;
+  margin-bottom: 6px;
+  margin-left: 2px;
+}
 @media (max-width: 544px) {
   #what {
     padding-top: 0;
@@ -357,21 +362,44 @@ footer.footer .container {
   position: absolute;
   text-decoration: none;
   cursor: pointer;
-  font-size: 150px;
-  transition: font-size 0.5s, color 0.5s;
+  transition: color 0.5s;
   color: #999;
   width: 100%;
   text-align: center;
+  margin-top: .5em;
+}
+#where .contacts div.contact-block a i {
+  transition: font-size 0.5s;
+  font-size: 150px;
+}
+#where .contacts div.contact-block a p {
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 #where .contacts div.contact-block a:hover {
   color: rgba(236, 64, 102, 0.9);
+}
+#where .contacts div.contact-block a:hover i {
   font-size: 200px;
 }
-@media (max-width: 544px) {
+#where .contacts div.contact-block a:hover p {
+  opacity: 1;
+}
+@media (max-width: 992px) {
+  #where .contacts div.contact-block a p {
+    opacity: 1;
+  }
+}
+@media (max-width: 768px) {
   #where .contacts div.contact-block:after {
     padding-top: 50%;
   }
-  #where .contacts div.contact-block a {
+}
+@media (max-width: 544px) {
+  #where .contacts div.contact-block a i {
     font-size: 100px;
+  }
+  #where .contacts div.contact-block a:hover i {
+    font-size: 120px;
   }
 }

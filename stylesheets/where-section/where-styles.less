@@ -7,28 +7,63 @@
      position: absolute;
      text-decoration: none;
      cursor: pointer;
-     font-size: 150px;
-     transition: font-size 0.5s, color 0.5s;
+     transition: color 0.5s;
      color: @font-color-light;
      width: 100%;
      text-align: center;
+     margin-top: .5em;
+
+     i {
+       transition: font-size 0.5s;
+       font-size: 150px;
+     }
+
+     p {
+       opacity: 0;
+       transition: opacity 0.5s ease;
+     }
 
      &:hover {
        color: @base-color;
-       font-size: 200px;
+       i {
+        font-size: 200px;
+       }
+       p {
+         opacity: 1;
+       }
      }
    }
  }
 }
 
-@media(max-width: 544px) {
+@media(max-width: @large) {
+  #where {
+    .contacts div.contact-block a p {
+      opacity: 1;
+    }
+  }
+}
+
+@media(max-width: @medium) {
   #where {
     .contacts div.contact-block {
       &:after {
         padding-top: 50%;
       }
-      a {
+    }
+  }
+}
+
+@media(max-width: @small) {
+  #where {
+    .contacts div.contact-block a {
+      i {
         font-size: 100px;
+      }
+      &:hover {
+        i {
+          font-size: 120px;
+        }
       }
     }
   }

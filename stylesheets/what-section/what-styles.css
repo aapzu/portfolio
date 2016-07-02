@@ -1,0 +1,13 @@
+#what .row.title-row {
+  margin-bottom: 20px;
+}
+#what .streamr-logo {
+  height: 1em;
+  margin-bottom: 6px;
+  margin-left: 2px;
+}
+@media (max-width: 544px) {
+  #what {
+    padding-top: 0;
+  }
+}

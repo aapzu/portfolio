@@ -78,7 +78,7 @@
   }
 }
 
-@media(max-width: 1200px) {
+@media(max-width: @x-large) {
   #who {
     .fp-box {
       .fp-box-title {
@@ -91,7 +91,7 @@
   }
 }
 
-@media(max-width: 544px) {
+@media(max-width: @small) {
   #who {
     .fp-box-row {
       margin-left: -10px;
@@ -115,7 +115,7 @@
   }
 }
 
-@media(min-width: 544px) {
+@media(min-width: @small) {
   #who {
     .fp-box:hover {
       .fp-box-title {
@@ -131,7 +131,8 @@
     }
   }
 }
-@media(min-width: 768px) {
+
+@media(min-width: @medium) {
   #who {
     .title-row {
       .description p {
@@ -144,7 +145,7 @@
   }
 }
 
-@media(min-width: 544px) and (max-width: 768px) {
+@media(min-width: @small) and (max-width: @medium) {
   #who {
     .fp-box {
       margin: 15px;
