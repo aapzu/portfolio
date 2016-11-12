@@ -10,7 +10,7 @@ $(function(){
     })
 
     // Scrolling effect
-    $(".navbar a[href^='#']").each(function(i, el) {
+    $("a[href^='#'][animate]").each(function(i, el) {
         $(el).click(function(e) {
             e.preventDefault()
             $("nav.navbar").autoHidingNavbar("setDisableAutohide", true)

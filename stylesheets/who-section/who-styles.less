@@ -21,10 +21,14 @@
 
     &:hover {
       img {
+        -webkit-animation: blurscale 3s ease;
+        animation: blurscale 3s ease;
+
         transform: scale(1.33);
         filter: blur(10px) grayscale(100%);
         -webkit-filter: blur(2px) grayscale(100%);
-        transition: filter, -webkit-filter, transform 3s ease;
+        transition: filter, -webkit-filter, transform 0s;
+        transition-delay: 3s;
       }
     }
 
@@ -150,5 +154,20 @@
     .fp-box {
       margin: 15px;
     }
+  }
+}
+
+@keyframes blurscale {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    filter: blur(0px) grayscale(100%);
+    -webkit-filter: blur(0px) grayscale(100%);
+  }
+  100% {
+    -webkit-transform: scale(1.33);
+    transform: scale(1.33);
+    filter: blur(10px) grayscale(100%);
+    -webkit-filter: blur(2px) grayscale(100%);
   }
 }
