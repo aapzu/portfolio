@@ -1,5 +1,25 @@
 
 #who {
+
+  .title-row {
+    padding-top: 170px;
+    padding-bottom: 100px;
+
+    .name {
+      font-size: 80px;
+
+      p:first-child {
+        margin-bottom: -30px;
+      }
+    }
+
+    .description {
+      p {
+        line-height: 2rem;
+      }
+    }
+  }
+
   .fp-box-row {
     margin-left: -25px;
     margin-right: -25px;
@@ -21,14 +41,12 @@
 
     &:hover {
       img {
-        -webkit-animation: blurscale 3s ease;
-        animation: blurscale 3s ease;
+        -webkit-animation: blurred 10s ease;
+        animation: blurred 10s ease;
 
-        transform: scale(1.33);
         filter: blur(10px) grayscale(100%);
-        -webkit-filter: blur(2px) grayscale(100%);
-        transition: filter, -webkit-filter, transform 0s;
-        transition-delay: 3s;
+        -webkit-filter: blur(10px) grayscale(100%);
+        transition: filter, -webkit-filter 0s;
       }
     }
 
@@ -59,26 +77,18 @@
     img {
       -webkit-filter: grayscale(100%);
       filter: grayscale(100%);
+      position: absolute;
+      top: 0;
+      left: 0;
       height: 100%;
       width: 100%;
     }
-  }
 
-  .title-row {
-    padding-top: 100px;
-    padding-bottom: 100px;
-
-    .name {
-      font-size: 80px;
-
-      p:first-child {
-        margin-bottom: -30px;
-      }
+    img[data-resolution=medium],
+    img[data-resolution=high] {
+      display: none;
     }
 
-    .description p {
-      line-height: 2rem;
-    }
   }
 }
 
@@ -125,8 +135,6 @@
       .fp-box-title {
         margin-top: 15%;
         font-size: 40px;
-        transition: font-size 0.3s ease;
-        //transition: font-size 0.3s cubic-bezier(0.4, 0, 1, 1);
       }
       .fp-box-content {
         visibility: visible;
@@ -157,16 +165,12 @@
   }
 }
 
-@keyframes blurscale {
+@keyframes blurred {
   0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
     filter: blur(0px) grayscale(100%);
     -webkit-filter: blur(0px) grayscale(100%);
   }
   100% {
-    -webkit-transform: scale(1.33);
-    transform: scale(1.33);
     filter: blur(10px) grayscale(100%);
     -webkit-filter: blur(2px) grayscale(100%);
   }

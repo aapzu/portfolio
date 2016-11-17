@@ -56,13 +56,24 @@
 
 @media(max-width: @small) {
   #where {
-    .contacts div.contact-block a {
-      i {
-        font-size: 100px;
-      }
-      &:hover {
-        i {
-          font-size: 120px;
+    .contacts {
+      padding-top: 30px;
+      padding-bottom: 20px;
+
+      div.contact-block {
+        &:after {
+          padding-top: 40%;
+        }
+
+        a {
+          i {
+            font-size: 100px;
+          }
+          &:hover {
+            i {
+              font-size: 120px;
+            }
+          }
         }
       }
     }
