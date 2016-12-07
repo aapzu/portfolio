@@ -1,1 +1,1 @@
-lessc stylesheets/main.less > stylesheets/main.css
+lessc static/stylesheets/main.less > static/stylesheets/main.css

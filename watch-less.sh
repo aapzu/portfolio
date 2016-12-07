@@ -1,1 +1,1 @@
-less-watch-compiler stylesheets/ stylesheets/ main.less
+less-watch-compiler static/stylesheets/ static/stylesheets/ main.less
