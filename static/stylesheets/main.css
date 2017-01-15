@@ -7,6 +7,9 @@ body {
   height: 100%;
   font-family: 'Roboto', sans-serif;
 }
+section .title-row h2 {
+  font-size: 40px;
+}
 .hyphenate {
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -91,7 +94,7 @@ footer.footer .container {
   padding-top: 10px;
 }
 @media (max-width: 544px) {
-  h1 {
+  section .title-row h2 {
     font-size: 2.1rem;
   }
   nav.navbar .nav-item + .nav-item {
@@ -102,11 +105,9 @@ footer.footer .container {
   padding-top: 170px;
   padding-bottom: 100px;
 }
-#who .title-row .name {
+#who .title-row .name h1.title {
   font-size: 80px;
-}
-#who .title-row .name p:first-child {
-  margin-bottom: -30px;
+  word-spacing: 10000px;
 }
 #who .title-row .description p {
   line-height: 2rem;
