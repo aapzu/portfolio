@@ -195,7 +195,7 @@ footer.footer .container {
     padding-top: 30px;
     padding-bottom: 30px;
   }
-  #who .title-row .name {
+  #who .title-row h1.title {
     font-size: 60px;
   }
 }
