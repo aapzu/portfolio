@@ -54,6 +54,7 @@ $(function(){
 
     $("img[data-resolution]").one("load", function() {
         $(this).show()
+        $(this).prev("img[data-resolution]").remove()
     }).each(function() {
         if(this.complete) $(this).load();
     })
