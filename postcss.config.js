@@ -4,6 +4,7 @@ module.exports = {
 		require('precss'),
 		require('autoprefixer'),
 		require('postcss-nested'),
-		require('postcss-color-function')
+		require('postcss-color-function'),
+		require('css-mqpacker')
 	]
 }

@@ -1,7 +1,7 @@
-import React from "react"
-import { Router, Route, Redirect } from "react-router"
+import React from 'react'
+import { Router, Route, Redirect } from 'react-router'
 
-import Page from "./Page"
+import Page from './Page'
 
 export default (
 	<Router>
