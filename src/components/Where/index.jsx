@@ -9,7 +9,7 @@ export default class Where extends Component {
 	render() {
 		return (
 			<section id="where" className={styles.whereSection}>
-				<Row className={styles.whereContainer}>
+				<Row className={[styles.whereContainer, styles.contacts].join(' ')}>
 					<Col xs={12}>
 						<h2>How to get in touch?</h2>
 						<p>Please don't hesitate to contact me!</p>
@@ -17,10 +17,10 @@ export default class Where extends Component {
 					<Col md={4} xs={12} className={styles.contactBlock}>
 						<Square>
 							<a
-								href="mailto:aapelisomeaddedstuffhaanpuu@ikimorestufffi"
+								href="mailto:aapelisomeaddedstuffforbothaanpuu@ikimorestufffi"
 								className={appStyles.centeredY}
 								ref={a => this.mailLink = a}
-								onClick={() => this.mailLink.href = this.mailLink.href.replace(/someaddedstuff/, '.').replace(/morestuff/, '.')}
+								onClick={() => this.mailLink.href = this.mailLink.href.replace(/someaddedstuffforbots/, '.').replace(/morestuff/, '.')}
 							>
 								<FontAwesome name="envelope-square" className={styles.icon}/>
 								<p>Email</p>

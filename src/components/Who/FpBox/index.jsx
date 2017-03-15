@@ -8,10 +8,7 @@ export default class FpBox extends Component {
 			this.props.type !== 'image' ?
 				<Square className={styles.fpBox} divRef={this.props.divRef}>
 					<div className={styles.fpBoxTitle}>
-						<a href="#learnerDescription" className="hidden-sm-up">
-							{this.props.title}
-						</a>
-						<p className="hidden-xs-down">
+						<p>
 							{this.props.title}
 						</p>
 					</div>

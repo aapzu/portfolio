@@ -6,6 +6,12 @@ section.titleSection {
   align-items: center;
 }
 
+.fadeAnim {
+  animation-name: fadeIn;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+
 .titleRow {
 
   > * {
@@ -18,13 +24,39 @@ section.titleSection {
     margin: 0;
 
     span {
+      opacity: 0;
       display: block;
+
+      &:first-child {
+        animation-delay: 0.2s;
+      }
+      &:nth-child(2) {
+        animation-delay: 0.6s;
+      }
     }
   }
+
   .description {
     p {
+      opacity: 0;
       line-height: 2rem;
+
+      &:first-child {
+        animation-delay: 1.0s;
+      }
+      &:nth-child(2) {
+        animation-delay: 1.4s;
+      }
     }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

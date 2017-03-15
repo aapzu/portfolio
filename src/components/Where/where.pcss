@@ -6,10 +6,6 @@
   align-items: center;
 }
 
-.whereContainer {
-  width: 100%;
-}
-
 div.contactBlock a {
   position: absolute;
   text-decoration: none;
@@ -40,17 +36,18 @@ div.contactBlock a {
   }
 }
 
-@media (max-width: 992px) {
-  .contacts div.contact-block a p {
+@media (--md-down) {
+  .contacts div.contactBlock a p {
     opacity: 1;
   }
 }
-@media (max-width: 768px) {
-  .contacts div.contact-block:after {
+
+@media (--sm-down) {
+  .contacts div.contactBlock:after {
     padding-top: 50%;
   }
 }
-@media (max-width: 544px) {
+@media (--xs) {
   .contacts {
     padding-top: 30px;
     padding-bottom: 20px;

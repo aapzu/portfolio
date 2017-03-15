@@ -138,6 +138,7 @@
     "react-masonry-component": "^5.0.3",
     "react-redux": "^4.0.0",
     "react-router": "^2.3.0",
+    "react-scrollchor": "^2.2.0",
     "react-svg-inline": "^1.1.0",
     "react-topbar-progress-indicator": "^1.0.0",
     "reactstrap": "^4.2.0",
