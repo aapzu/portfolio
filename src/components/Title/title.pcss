@@ -1,0 +1,48 @@
+
+@import '../../variables.pcss';
+
+section.titleSection {
+  display: flex;
+  align-items: center;
+}
+
+.titleRow {
+
+  > * {
+    padding: 0 30px;
+  }
+
+  h1.title {
+    font-size: 4.5rem;
+    word-spacing: 10000px;
+    margin: 0;
+
+    span {
+      display: block;
+    }
+  }
+  .description {
+    p {
+      line-height: 2rem;
+    }
+  }
+}
+
+@media (--md-up) {
+  .titleRow {
+    padding-top: 170px;
+    padding-bottom: 170px;
+  }
+}
+
+@media (--xs) {
+  .titleRow {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    h1.title {
+      font-size: 3rem;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+}

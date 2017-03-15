@@ -46,7 +46,7 @@ const DefaultHeadMeta = (props, {metadata: {pkg}}) => (
 				content: 'width=device-width, initial-scale=1',
 			}] }
 		/>
-		<style>{ '@-ms-viewport { width: device-width; } html { background-color: #333} ' }</style>
+		<style>{ '@-ms-viewport { width: device-width; } ' }</style>
 		<link rel='icon' href='img/favicon.ico'/>
 		<script async src='https://www.google-analytics.com/analytics.js'></script>
 	</div>

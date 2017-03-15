@@ -1,24 +1,6 @@
 
 @import '../../variables.pcss';
 
-.titleRow {
-
-  > * {
-    padding: 0 30px;
-  }
-
-  h1.title {
-    font-size: 4.5rem;
-    word-spacing: 10000px;
-    margin: 0;
-  }
-  .description {
-    p {
-      line-height: 2rem;
-    }
-  }
-}
-
 .descriptionBox {
   padding-top: 20px;
 
@@ -34,54 +16,6 @@
   padding: 25px;
 }
 
-.fpBox {
-  background-color: var(--highlightColor);
-
-  .fpBoxTitle {
-    font-size: 3rem;
-    margin-top: 50%;
-    transform: translateY(-65%);
-    transition: font-size 0.3s cubic-bezier(0, 0, 0.38, 1), margin-top 0.3s ease-out;
-    padding-left: 20px;
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-  }
-  .fpBoxContent {
-    visibility: hidden;
-    text-align: justify;
-    padding: 20px;
-    transition: visibility;
-    transition-delay: 0.2s;
-    position: relative;
-    color: #FFFFFF;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(20, 20, 20, 0.5);
-  }
-
-  img {
-    filter: grayscale(100%);
-  }
-
-  &:hover {
-    img {
-      animation: blurred 10s ease;
-      filter: blur(10px) grayscale(100%);
-      transition: filter, -webkit-filter 0s;
-    }
-    .fpBoxContent {
-      visibility: visible;
-      transition-delay: 0.0s;
-    }
-  }
-}
-
-.fpBox.imageContainer {
-  background-color: transparent;
-}
 
 @keyframes blurred {
   0% {
@@ -93,49 +27,19 @@
 }
 
 @media (--md-up) {
-  .titleRow {
-    padding-top: 170px;
-    padding-bottom: 170px;
-  }
   .description p {
     float: right;
     text-align: right;
     width: 58%;
   }
-  .fpBox:hover {
-    .fpBoxTitle {
-      margin-top: 25%;
-      font-size: 2.5rem;
-    }
-    .fpBoxContent {
-      visibility: visible;
-    }
-  }
 }
 
 @media (--xs) {
-  .titleRow {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    h1.title {
-      font-size: 3rem;
-      padding-top: 20px;
-      padding-bottom: 20px;
-    }
-  }
   .fpBoxRow {
     padding-left: 5px;
     padding-right: 5px;
     .fpBoxContainer {
       padding: 10px;
-    }
-  }
-  .fpBox {
-    .fpBoxTitle {
-      font-size: 1.75rem;
-    }
-    .fpBoxContent {
-      display: none
     }
   }
 }

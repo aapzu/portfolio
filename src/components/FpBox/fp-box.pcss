@@ -1,0 +1,74 @@
+
+@import '../../variables.pcss';
+
+.fpBox {
+  background-color: var(--highlightColor);
+
+  .fpBoxTitle {
+    font-size: 3rem;
+    margin-top: 50%;
+    transform: translateY(-65%);
+    transition: font-size 0.3s cubic-bezier(0, 0, 0.38, 1), margin-top 0.3s ease-out;
+    padding-left: 20px;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+  .fpBoxContent {
+    visibility: hidden;
+    text-align: justify;
+    padding: 20px;
+    transition: visibility;
+    transition-delay: 0.2s;
+    position: relative;
+    color: #FFFFFF;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(20, 20, 20, 0.5);
+  }
+
+  img {
+    filter: grayscale(100%);
+  }
+
+  &:hover {
+    img {
+      animation: blurred 10s ease;
+      filter: blur(10px) grayscale(100%);
+      transition: filter, -webkit-filter 0s;
+    }
+    .fpBoxContent {
+      visibility: visible;
+      transition-delay: 0.0s;
+    }
+  }
+
+  &.imageContainer {
+    background-color: transparent;
+  }
+}
+
+@media (--md-up) {
+  .fpBox:hover {
+    .fpBoxTitle {
+      margin-top: 25%;
+      font-size: 2.5rem;
+    }
+    .fpBoxContent {
+      visibility: visible;
+    }
+  }
+}
+
+@media (--xs) {
+  .fpBox {
+    .fpBoxTitle {
+      font-size: 1.75rem;
+    }
+    .fpBoxContent {
+      display: none
+    }
+  }
+}
