@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import MultiResImage from './MultiResImage'
 import { Row, Col } from 'reactstrap'
-import FpBox from '../FpBox'
+import FpBox from './FpBox'
 import styles from './who.pcss'
 
 export default class Who extends Component {
@@ -27,7 +27,7 @@ export default class Who extends Component {
 					<Col xs={6} lg={4} className={styles.fpBoxContainer}>
 						<FpBox
 							title="Thinker"
-							desciption="Problem-solving and thinking outside the box is my thing.
+							description="Problem-solving and thinking outside the box is my thing.
 								I like to take my time to ponder things thoroughly,
 								but don't hesitate to make decisions."/>
 					</Col>

@@ -1,14 +1,14 @@
 var OFF = 0, WARN = 1, ERROR = 2;
 
 module.exports = exports = {
-	
+
 	extends: [
 		'eslint:recommended',
 		'plugin:react/recommended'
 	],
-	
+
 	root: true,
-	
+
 	parserOptions: {
 		ecmaVersion: 6,
 		sourceType: 'module',
@@ -18,17 +18,17 @@ module.exports = exports = {
 			experimentalObjectRestSpread: true
 		}
 	},
-	
+
 	env: {
 		es6: true,
 		node: true,
 		browser: true
 	},
-	
+
 	plugins: [
 		'react'
 	],
-	
+
 	rules: {
 		'no-console': [
 			2,
@@ -73,5 +73,5 @@ module.exports = exports = {
 		}],
 		'no-unexpected-multiline': ERROR,
 	}
-	
+
 }

@@ -5,7 +5,7 @@ import styles from './square.pcss'
 export default class Square extends Component {
 	render() {
 		return (
-			<div className={[styles.square, this.props.className].join(' ')}>
+			<div className={[styles.square, this.props.className].join(' ')} ref={this.props.divRef}>
 				<div className={styles.content}>
 					{this.props.children}
 				</div>
@@ -19,5 +19,6 @@ Square.propTypes = {
 		React.PropTypes.array,
 		React.PropTypes.element
 	]),
-	className: React.PropTypes.string
+	className: React.PropTypes.string,
+	ref: React.PropTypes.func
 }

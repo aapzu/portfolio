@@ -1,15 +1,26 @@
 
-@import '../../variables.pcss';
+@import '../../../variables.pcss';
 
 .fpBox {
   background-color: var(--highlightColor);
 
+  .fpBoxTitle,
+  .fpBoxContent {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+
   .fpBoxTitle {
+    top: 0;
     font-size: 3rem;
-    margin-top: 50%;
-    transform: translateY(-65%);
-    transition: font-size 0.3s cubic-bezier(0, 0, 0.38, 1), margin-top 0.3s ease-out;
+    transition: font-size 0.3s cubic-bezier(0, 0, 0.38, 1), top 0.3s ease-out;
     padding-left: 20px;
+
+    > * {
+      margin-top: 50%;
+      transform: translateY(-50%);
+    }
 
     a {
       text-decoration: none;
@@ -17,11 +28,12 @@
     }
   }
   .fpBoxContent {
-    visibility: hidden;
+    top: 100%;
+    display: flex;
     text-align: justify;
+    align-items: center;
     padding: 20px;
-    transition: visibility;
-    transition-delay: 0.2s;
+    transition: top 0.3s;
     position: relative;
     color: #FFFFFF;
     height: 100%;
@@ -50,14 +62,23 @@
   }
 }
 
+@keyframes blurred {
+  0% {
+    filter: blur(0px) grayscale(100%);
+  }
+  100% {
+    filter: blur(10px) grayscale(100%);
+  }
+}
+
 @media (--md-up) {
   .fpBox:hover {
     .fpBoxTitle {
-      margin-top: 25%;
+      top: -100%;
       font-size: 2.5rem;
     }
     .fpBoxContent {
-      visibility: visible;
+      top: 0;
     }
   }
 }

@@ -28,17 +28,17 @@ export default (config = {}) => {
 					test: /\.json$/,
 					loader: "json-loader",
 				},
-				{
-					test: /\.jsx?$/,
-					exclude: /node_modules/,
-					enforce: 'pre',
-					use: [{
-						loader: 'eslint-loader',
-						options: {
-							configFile: './.eslintrc.js'
-						}
-					}]
-				},
+				// {
+				// 	test: /\.jsx?$/,
+				// 	exclude: /node_modules/,
+				// 	enforce: 'pre',
+				// 	use: [{
+				// 		loader: 'eslint-loader',
+				// 		options: {
+				// 			configFile: './.eslintrc.js'
+				// 		}
+				// 	}]
+				// },
 				{
 					test: /\.jsx?$/,
 					include: [

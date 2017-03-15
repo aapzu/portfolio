@@ -1,26 +1,26 @@
 import React, { Component } from 'react'
-import Square from '../Square'
+import Square from '../../Square'
 import styles from './fp-box.pcss'
 
 export default class FpBox extends Component {
 	render() {
 		return (
 			this.props.type !== 'image' ?
-				<Square className={styles.fpBox}>
-					<p className={styles.fpBoxTitle}>
+				<Square className={styles.fpBox} divRef={this.props.divRef}>
+					<div className={styles.fpBoxTitle}>
 						<a href="#learnerDescription" className="hidden-sm-up">
 							{this.props.title}
 						</a>
-						<span className="hidden-xs-down">
+						<p className="hidden-xs-down">
 							{this.props.title}
-						</span>
-					</p>
+						</p>
+					</div>
 					<div className={styles.fpBoxContent}>
 						{this.props.description}
 					</div>
 				</Square>
 				:
-				<Square className={[styles.fpBox, styles.imageContainer].join(' ')}>
+				<Square className={[styles.fpBox, styles.imageContainer].join(' ')} divRef={this.props.divRef}>
 					{this.props.children}
 				</Square>
 		)
@@ -34,5 +34,6 @@ FpBox.propTypes = {
 	children: React.PropTypes.oneOfType([
 		React.PropTypes.element,
 		React.PropTypes.arrayOf(React.PropTypes.element)
-	])
+	]),
+	ref: React.PropTypes.func
 }
