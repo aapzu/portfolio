@@ -1,37 +1,35 @@
 
 @import '../../variables.pcss';
 
-.whereSection {
-  display: flex;
-  align-items: center;
-}
+.whereContainer {
+  margin-top: 20%;
+  div.contactBlock a {
+    position: absolute;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.5s;
+    color: #FFF;
+    width: 100%;
+    text-align: center;
+    margin-top: .5em;
 
-div.contactBlock a {
-  position: absolute;
-  text-decoration: none;
-  cursor: pointer;
-  transition: color 0.5s;
-  color: #FFF;
-  width: 100%;
-  text-align: center;
-  margin-top: .5em;
-
-  .icon {
-    transition: font-size 0.5s;
-    font-size: 10rem;
-  }
-  p {
-    opacity: 0;
-    transition: opacity 0.5s ease;
-  }
-
-  &:hover {
-    color: var(--highlightColor);
     .icon {
-      font-size: 15rem;
+      transition: font-size 0.5s;
+      font-size: 10rem;
     }
     p {
-      opacity: 1;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    &:hover {
+      color: var(--highlightColor);
+      .icon {
+        font-size: 15rem;
+      }
+      p {
+        opacity: 1;
+      }
     }
   }
 }
@@ -42,11 +40,18 @@ div.contactBlock a {
   }
 }
 
+@media (--sm-up) {
+  .whereContainer {
+    /*width: 100%;*/
+  }
+}
+
 @media (--sm-down) {
   .contacts div.contactBlock:after {
     padding-top: 50%;
   }
 }
+
 @media (--xs) {
   .contacts {
     padding-top: 30px;

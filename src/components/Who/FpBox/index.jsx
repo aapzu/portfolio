@@ -32,5 +32,5 @@ FpBox.propTypes = {
 		React.PropTypes.element,
 		React.PropTypes.arrayOf(React.PropTypes.element)
 	]),
-	ref: React.PropTypes.func
+	divRef: React.PropTypes.func
 }

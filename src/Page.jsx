@@ -1,7 +1,6 @@
 
 import React, {Component} from 'react'
 
-import 'roboto-fontface/css/roboto/roboto-fontface.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'font-awesome/css/font-awesome.css'
 

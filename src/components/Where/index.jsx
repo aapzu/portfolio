@@ -17,7 +17,7 @@ export default class Where extends Component {
 					<Col md={4} xs={12} className={styles.contactBlock}>
 						<Square>
 							<a
-								href="mailto:aapelisomeaddedstuffforbothaanpuu@ikimorestufffi"
+								href="mailto:aapelisomeaddedstuffforbotshaanpuu@ikimorestufffi"
 								className={appStyles.centeredY}
 								ref={a => this.mailLink = a}
 								onClick={() => this.mailLink.href = this.mailLink.href.replace(/someaddedstuffforbots/, '.').replace(/morestuff/, '.')}

@@ -20,5 +20,5 @@ Square.propTypes = {
 		React.PropTypes.element
 	]),
 	className: React.PropTypes.string,
-	ref: React.PropTypes.func
+	divRef: React.PropTypes.func
 }
