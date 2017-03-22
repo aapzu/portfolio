@@ -28,7 +28,7 @@ const DefaultHeadMeta = (props, {metadata: {pkg}}) => (
 				},
 				{
 					property: 'og:image',
-					content: 'img/Kasvokuva1_337x337.jpg'
+					content: `${pkg.homepage}/assets/img/Kasvokuva1_337x337.jpg`
 				},
 				...props.meta ? props.meta : [],
 			] }
