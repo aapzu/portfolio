@@ -63,7 +63,7 @@ module.exports = exports = {
 			"ObjectExpression": "always",
 			"ObjectPattern": "never"
 		}],
-		'indent': [ERROR, 'tab', {
+		'indent': [ERROR, 4, {
 			'SwitchCase': 1,
 			"MemberExpression": 1,
 			"ObjectExpression": 1
