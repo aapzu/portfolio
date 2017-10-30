@@ -20,7 +20,9 @@ export default class Where extends Component {
                                 href="mailto:aapelisomeaddedstuffforbotshaanpuu@ikimorestufffi"
                                 className={appStyles.centeredY}
                                 ref={a => this.mailLink = a}
-                                onClick={() => this.mailLink.href = this.mailLink.href.replace(/someaddedstuffforbotsf/, '.').replace(/morestuff/, '.')}
+                                onClick={() => {
+                                    this.mailLink.href = this.mailLink.href.replace(/someaddedstuffforbots/, '.').replace(/morestuff/, '.')
+                                }}
                             >
                                 <FontAwesome name="envelope-square" className={styles.icon}/>
                                 <p>Email</p>
