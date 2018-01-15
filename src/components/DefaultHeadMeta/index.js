@@ -30,6 +30,10 @@ const DefaultHeadMeta = (props, {metadata: {pkg}}) => (
                     property: 'og:image',
                     content: `${pkg.homepage}/assets/img/Kasvokuva1_337x337.jpg`
                 },
+                {
+                    property: 'google-site-verification',
+                    content: 'FPqs_XFLgs8HJLtHgcGAz95ATDOKUOZFv2KGCFfYXTQ'
+                },
                 ...props.meta ? props.meta : [],
             ] }
             script={[
