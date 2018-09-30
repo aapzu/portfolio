@@ -5,7 +5,7 @@ import FontAwesome from 'react-fontawesome'
 import styles from './where.pcss'
 import appStyles from '../App/app.pcss'
 
-export default class Where extends Component {
+export default class Contact extends Component {
     render() {
         return (
             <section id="where" className={styles.whereSection}>

@@ -1,0 +1,86 @@
+
+@import '../../variables.pcss';
+
+.fadeAnim {
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+
+  &.fadeAnim1 {
+    animation-delay: 0.2s;
+  }
+
+  &.fadeAnim2 {
+    animation-delay: 0.6s;
+  }
+
+  &.fadeAnim3 {
+    animation-delay: 1.0s;
+  }
+
+  &.fadeAnim4 {
+    animation-delay: 1.4s;
+  }
+}
+
+.titleRow {
+  .title {
+    font-size: 4.5rem;
+    word-spacing: 10000px;
+    margin: 0;
+    height: 100%;
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    > * {
+      margin: 0;
+    }
+  }
+
+  .description {
+    :global(.row) {
+      height: 100%;
+    }
+
+    .descriptionTitle {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      word-spacing: 1000px;
+    }
+
+    .techStack {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: right;
+
+      > * {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (--xs) {
+  .titleRow {
+    margin-top: -20px;
+    h1.title {
+      font-size: 3rem;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+}
