@@ -144,7 +144,7 @@
     "react-scrollchor": "^2.2.0",
     "react-svg-inline": "^1.1.0",
     "react-topbar-progress-indicator": "^1.0.0",
-    "react-visibility-sensor": "^3.7.0",
+    "react-visibility-sensor": "^3.14.0",
     "reactstrap": "^6.4.0",
     "redux": "^3.0.0",
     "roboto-fontface": "^0.7.0",
