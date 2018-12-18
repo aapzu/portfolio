@@ -1,23 +1,20 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { oneOfType, array, element, string, func } from 'prop-types'
+import classnames from 'classnames'
 import styles from './square.pcss'
 
-export default class Square extends Component {
-    render() {
-        return (
-            <div className={[styles.square, this.props.className].join(' ')} ref={this.props.divRef}>
-                <div className={styles.content}>
-                    {this.props.children}
-                </div>
-            </div>
-        )
-    }
-}
+const Square = ({ className, divRef, children }) => (
+    <div className={classnames(styles.square, className)} ref={divRef}>
+        <div className={styles.content}>
+            {children}
+        </div>
+    </div>
+)
 
 Square.propTypes = {
-    children: React.PropTypes.oneOfType([
-        React.PropTypes.array,
-        React.PropTypes.element
-    ]),
-    className: React.PropTypes.string,
-    divRef: React.PropTypes.func
+    children: oneOfType([array, element]),
+    className: string,
+    divRef: func
 }
+
+export default Square

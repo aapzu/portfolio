@@ -1,7 +1,8 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
+import { object, arrayOf } from 'prop-types'
 import Helmet from 'react-helmet'
 
-const DefaultHeadMeta = (props, {metadata: {pkg}}) => (
+const DefaultHeadMeta = ({ meta, scripts }, { metadata: { pkg } }) => (
     <div hidden>
         <Helmet
             title="Aapeli Haanpuu"
@@ -30,13 +31,13 @@ const DefaultHeadMeta = (props, {metadata: {pkg}}) => (
                     property: 'google-site-verification',
                     content: 'FPqs_XFLgs8HJLtHgcGAz95ATDOKUOZFv2KGCFfYXTQ'
                 },
-                ...props.meta ? props.meta : [],
+                ...(meta || []),
             ] }
             script={[
                 {
                     src: 'https://cdn.polyfill.io/v2/polyfill.min.js'
                 },
-                ...props.scripts ? props.scripts : [],
+                ...(scripts || []),
             ]}
         />
         
@@ -48,17 +49,17 @@ const DefaultHeadMeta = (props, {metadata: {pkg}}) => (
         />
         <style>{ '@-ms-viewport { width: device-width; } ' }</style>
         <link rel='icon' href='img/favicon.ico'/>
-        <script async src='https://www.google-analytics.com/analytics.js'></script>
+        <script async src='https://www.google-analytics.com/analytics.js' />
     </div>
 )
 
 DefaultHeadMeta.propTypes = {
-    meta: React.PropTypes.arrayOf(React.PropTypes.object),
-    scripts: React.PropTypes.arrayOf(React.PropTypes.object),
+    meta: arrayOf(object),
+    scripts: arrayOf(object),
 }
 
 DefaultHeadMeta.contextTypes = {
-    metadata: PropTypes.object.isRequired,
+    metadata: object.isRequired,
 }
 
 export default DefaultHeadMeta
