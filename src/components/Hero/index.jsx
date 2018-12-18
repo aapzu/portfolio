@@ -20,15 +20,23 @@ export default class Hero extends Component {
                     </Col>
                     <Col xs={12} md={6} className={styles.description}>
                         <Row>
-                            <Col xs={12} md={6} className={classnames(styles.descriptionTitle, styles.fadeAnim, styles.fadeAnim3)}>
+                            <Col
+                                xs={12}
+                                md={6}
+                                className={classnames(styles.descriptionTitle, styles.fadeAnim, styles.fadeAnim3)}
+                            >
                                 Fullstack web developer
                             </Col>
-                            <Col xs={12} md={6} className={classnames(styles.techStack, styles.fadeAnim, styles.fadeAnim4)}>
-                                <p className={styles.fadeAnimA}>JS</p>
-                                <p className={styles.fadeAnimA}>CSS3</p>
-                                <p className={styles.fadeAnimA}>HTML5</p>
-                                <p pclassName={styles.fadeAnimA}>Node.js</p>
-                                <p className={styles.fadeAnimA}>Java</p>
+                            <Col
+                                xs={12}
+                                md={6}
+                                className={classnames(styles.techStack, styles.fadeAnim, styles.fadeAnim4)}
+                            >
+                                <p>JS</p>
+                                <p>CSS3</p>
+                                <p>HTML5</p>
+                                <p>Node.js</p>
+                                <p>Java</p>
                             </Col>
                         </Row>
                     </Col>
