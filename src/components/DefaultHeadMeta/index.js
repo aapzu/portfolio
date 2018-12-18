@@ -4,12 +4,8 @@ import Helmet from 'react-helmet'
 const DefaultHeadMeta = (props, {metadata: {pkg}}) => (
     <div hidden>
         <Helmet
-            title="Aapeli Haanpuu's portfolio"
+            title="Aapeli Haanpuu"
             meta={ [
-                {
-                    name: 'generator',
-                    content: `${process.env.PHENOMIC_NAME } ${ process.env.PHENOMIC_VERSION }`,
-                },
                 {
                     name: 'keywords',
                     content: 'Aapeli, Haanpuu, Portfolio, Developer'
