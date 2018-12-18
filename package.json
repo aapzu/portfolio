@@ -4,7 +4,7 @@
   "description": "The Portfolio of Aapeli Haanpuu",
   "repository": "https://github.com/aapzu/portfolio-page",
   "author": "Aapeli Haanpuu",
-  "homepage": "https://aapzu.github.io/portfolio",
+  "homepage": "https://haanpuu.fi",
   "scripts": {
     "lint:js": "eslint --ignore-path .gitignore --fix .",
     "lint": "npm-run-all --parallel lint:*",
