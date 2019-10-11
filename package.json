@@ -15,6 +15,7 @@
     "classnames": "^2.2.6",
     "compression": "^1.7.1",
     "fullpage.js": "^3.0.7",
+    "now-sapper": "^0.35.0",
     "polka": "next",
     "sirv": "^0.4.0"
   },
