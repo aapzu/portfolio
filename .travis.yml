@@ -11,6 +11,9 @@ before_deploy:
   - ssh-add /tmp/deploy_rsa
 install:
   - npm install
+script:
+  - npm test
+  - npm build
 deploy:
   provider: script
   skip_cleanup: true
