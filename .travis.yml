@@ -18,6 +18,6 @@ script:
 deploy:
   provider: script
   skip_cleanup: true
-  script: bash .scripts/deploy.sh
+  script: rsync -r --delete-after --quiet $TRAVIS_BUILD_DIR/__sapper__ ec2-user@$IP:portfolio
   on:
     branch: 'master'
