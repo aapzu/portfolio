@@ -1,6 +1,7 @@
 #!/bin/bash
 set -x
-ssh ec2-user@$IP <<EOF
+ssh ec2-user@$IP
+if [[ $TRAVIS_BRANCH = 'master' ]]; then
   cd ~/portfolio
   git reset --hard HEAD
   git pull
@@ -9,4 +10,4 @@ ssh ec2-user@$IP <<EOF
   npm run build
   pm2 start pm2-ecosystem.json
   echo "Latest version of portfolio running."
-EOF
+fi
