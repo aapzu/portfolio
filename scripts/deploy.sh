@@ -1,6 +1,7 @@
 #!/bin/bash
 set -x
 ssh ec2-user@$IP
+echo "SSHed in"
 if [[ $TRAVIS_BRANCH = 'master' ]]; then
   cd ~/portfolio
   git reset --hard HEAD
