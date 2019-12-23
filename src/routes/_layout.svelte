@@ -17,6 +17,11 @@
         width: 100%;
     }
 </style>
+
+<svelte:head>
+    <title>Aapeli Haanpuu</title>
+</svelte:head>
+
 <main>
     <slot></slot>
 </main>
