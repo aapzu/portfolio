@@ -106,7 +106,7 @@
     }
 
     .description h2 {
-        padding-top: 5px;
+        margin-top: 10px;
     }
 
     .footer {
@@ -127,6 +127,10 @@
         margin: 0 0 48px 48px;
         display: flex;
         align-items: flex-end;
+    }
+
+    .footer .left h1 {
+        margin-bottom: 10px;
     }
 
     .footer .right {
@@ -157,11 +161,12 @@
             text-align: left;
             margin-left: 16px;
             padding-bottom: 2px;
+            margin-bottom: 4px;
         }
         .description h2 {
             font-size: 16px;
             text-align: right;
-            margin-right: 16px;
+            margin-right: 8px;
             margin-top: 3px;
         }
         .footer .right {
