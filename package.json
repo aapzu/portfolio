@@ -2,7 +2,7 @@
   "name": "@aapzu/portfolio",
   "version": "0.0.1",
   "scripts": {
-    "dev": "npm -v && node -v && svelte-kit dev",
+    "dev": "svelte-kit dev",
     "build": "svelte-kit build",
     "preview": "svelte-kit preview",
     "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
@@ -29,6 +29,6 @@
     "@lukeed/uuid": "^2.0.0",
     "classnames": "^2.3.1",
     "cookie": "^0.4.1",
-    "fullpage.js": "^3.1.1"
+    "fullpage.js": "^3.0.9"
   }
 }

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import 'fullpage.js/dist/fullpage.css'
+  import 'fullpage.js/dist/fullpage.min.css'
   import '../global.scss'
 </script>
 

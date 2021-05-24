@@ -1,10 +1,23 @@
 <script lang="ts">
-  import cn from "classnames"
+  import cn from 'classnames'
 
   export let anchor
   export let onClick
   export let pages = []
 </script>
+
+<div class="page-indicator">
+  {#each pages as page}
+    <a
+      class={cn({
+        selected: anchor === page
+      })}
+      href={`#${page}`}
+    >
+      {page}
+    </a>
+  {/each}
+</div>
 
 <style lang="scss">
   .page-indicator {
@@ -19,7 +32,7 @@
   }
 
   .page-indicator > a::after {
-    content: "";
+    content: '';
     display: inline-block;
     width: 10px;
     height: 10px;
@@ -54,16 +67,3 @@
     }
   }
 </style>
-
-<div class="page-indicator">
-    {#each pages as page}
-      <a
-        class={cn({
-                selected: anchor === page,
-            })}
-        href={`#${page}`}
-      >
-          {page}
-      </a>
-    {/each}
-</div>
