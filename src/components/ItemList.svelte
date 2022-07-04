@@ -1,5 +1,4 @@
 <script lang="ts">
-	import cn from 'classnames';
 	import Item from './Item.svelte';
 
 	const MIN_TIMEOUT = 1500;
@@ -31,9 +30,11 @@
 	setTimeout(cb, getTimeout());
 </script>
 
-{#each indexesToShow as i}
-	<Item>{items[i]}</Item>
-{/each}
+<div>
+	{#each indexesToShow as i}
+		<Item>{items[i]}</Item>
+	{/each}
+</div>
 
 <style lang="scss">
 </style>

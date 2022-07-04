@@ -1,14 +1,8 @@
 <script lang="ts">
 	import { blur } from 'svelte/transition';
-	import Link from './Link.svelte';
 	import Item from './Item.svelte';
 	import ItemList from './ItemList.svelte';
 
-	export let onPageClick;
-	export let name = '';
-	export let anchor;
-	export let pages = [];
-	export let description;
 	export let links = [];
 	export let items = [];
 </script>

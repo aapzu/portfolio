@@ -35,10 +35,6 @@
 		font-size: 24px;
 		text-align: center;
 
-		&.secondary {
-			color: var(--secondary);
-		}
-
 		&:hover .info {
 			top: 0;
 			opacity: 1;

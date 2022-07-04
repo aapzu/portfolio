@@ -2,7 +2,6 @@
 	import cn from 'classnames';
 
 	export let anchor;
-	export let onClick;
 	export let pages = [];
 </script>
 
