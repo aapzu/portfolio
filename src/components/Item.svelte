@@ -1,5 +1,4 @@
 <script lang="ts">
-	import cn from 'classnames';
 	import Link from './Link.svelte';
 
 	export let href: string;

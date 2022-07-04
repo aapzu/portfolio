@@ -4,7 +4,6 @@
 
 <script lang="ts">
 	import { blur } from 'svelte/transition';
-	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import Page from '../components/Page.svelte';
 	import PageIndicator from '../components/PageIndicator.svelte';
@@ -72,7 +71,6 @@
 	];
 
 	onMount(async () => {
-		debugger;
 		const { default: fullpage } = await import('fullpage.js');
 		new fullpage('#fullpage', {
 			interlockedSlides: false,
