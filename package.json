@@ -12,7 +12,8 @@
 		"eslint": "eslint .",
 		"eslint:fix": "eslint . --fix",
 		"prettier": "prettier --check --plugin-search-dir=. .",
-		"prettier:fix": "prettier --write --plugin-search-dir=. ."
+		"prettier:fix": "prettier --write --plugin-search-dir=. .",
+		"tsc": "tsc --noEmit"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
@@ -44,7 +45,10 @@
 	},
 	"lint-staged": {
 		"*": "npm run prettier:fix",
-		"*.ts": "npm run eslint:fix",
+		"*.ts": [
+			"npm run tsc",
+			"npm run eslint:fix"
+		],
 		"*.svelte": "npm run eslint:fix"
 	}
 }

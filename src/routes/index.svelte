@@ -42,6 +42,7 @@
 			href: 'https://www.swappie.com',
 			info: '03/21 – current'
 		},
+
 		{
 			title: 'gofore',
 			href: 'https://www.gofore.com',
