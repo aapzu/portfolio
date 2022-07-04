@@ -1,6 +1,5 @@
 <script lang="ts">
 	import '../global.scss';
-	import 'fullpage.js/dist/fullpage.min.css';
 </script>
 
 <svelte:head>

@@ -4,7 +4,6 @@
 
 <script lang="ts">
 	import { blur } from 'svelte/transition';
-	import { onMount } from 'svelte';
 	import Page from '../components/Page.svelte';
 	import PageIndicator from '../components/PageIndicator.svelte';
 
@@ -70,22 +69,6 @@
 			href: 'https://aapzu.github.io/resume/resume.pdf'
 		}
 	];
-
-	onMount(async () => {
-		const { default: fullpage } = await import('fullpage.js');
-		new fullpage('#fullpage', {
-			interlockedSlides: false,
-			dragAndMove: false,
-			anchors: pages,
-			onLeave: (orig, dest) => {
-				anchor = dest.anchor;
-			}
-		});
-	});
-
-	const onPageClick = (anchor) => {
-		fp.moveTo(anchor);
-	};
 </script>
 
 <div class="container">
@@ -94,32 +77,42 @@
 			<h2 transition:blur>{descriptions[anchor] || anchor}</h2>
 		</div>
 	</div>
+	<div class="content">
+		<div class="section" id="about">
+			<Page {items} {name} {pages} {anchor} />
+		</div>
+		<div class="section" id="experience">
+			<Page links={experienceLinks} {name} {pages} {anchor} />
+		</div>
+		<div class="section" id="contact">
+			<Page links={contactLinks} {name} {pages} {anchor} />
+		</div>
+	</div>
 	<div class="footer">
 		<div class="left">
 			<h1>{name}</h1>
 		</div>
 		<div class="right">
-			<PageIndicator {anchor} {pages} onClick={onPageClick} />
-		</div>
-	</div>
-	<div id="fullpage">
-		<div class="section">
-			<Page {onPageClick} {items} {name} {pages} {anchor} />
-		</div>
-		<div class="section">
-			<Page links={experienceLinks} {onPageClick} {name} {pages} {anchor} />
-		</div>
-		<div class="section">
-			<Page links={contactLinks} {onPageClick} {name} {pages} {anchor} />
+			<PageIndicator {anchor} {pages} />
 		</div>
 	</div>
 </div>
 
 <style>
-	#fullpage,
+	.content,
 	.section,
 	.container {
 		height: 100%;
+	}
+
+	.content {
+		overflow: auto;
+		scroll-snap-type: y mandatory;
+		scroll-behavior: smooth;
+	}
+
+	.section {
+		scroll-snap-align: start;
 	}
 
 	.header {
@@ -131,16 +124,7 @@
 		justify-content: flex-end;
 	}
 
-	.container {
-		/*display: flex;*/
-		/*width: 100%;*/
-		/*justify-content: space-between;*/
-	}
-
 	.description {
-		/*position: absolute;*/
-		/*top: 0;*/
-		/*right: 0;*/
 		height: 120px;
 		width: 500px;
 		border-color: var(--secondary);
