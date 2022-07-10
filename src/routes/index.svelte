@@ -3,118 +3,56 @@
 </script>
 
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import { blur } from 'svelte/transition';
-	import Page from '../components/Page.svelte';
+	import Content from '../components/Content.svelte';
 	import PageIndicator from '../components/PageIndicator.svelte';
 
 	const name = 'aapeli haanpuu';
 
-	let fp;
-	const pages = ['about', 'experience', 'contact'];
-	const descriptions = {
-		about: 'fullstack web developer'
+	const pages = ['about', 'experience', 'contact'] as const;
+	const descriptions: Record<typeof pages[number], string> = {
+		about: 'what do I do?',
+		experience: 'my work history',
+		contact: 'how to contact me'
 	};
-	let anchor = pages[0];
 
-	const items = [
-		'javascript',
-		'css',
-		'react.js',
-		'web-development',
-		'juggling',
-		'express.js',
-		'climbing',
-		'typescript',
-		'node.js',
-		'origami',
-		'html',
-		'python',
-		'redux.js',
-		'java',
-		'groovy',
-		'es6',
-		'martial arts'
-	];
-	const experienceLinks = [
-		{
-			title: 'swappie',
-			href: 'https://www.swappie.com',
-			info: '03/21 – current'
-		},
+	let currentPage: string;
 
-		{
-			title: 'gofore',
-			href: 'https://www.gofore.com',
-			secondary: true,
-			info: '06/19 – 02/21'
-		},
-		{
-			title: 'streamr',
-			href: 'https://streamr.network',
-			secondary: true,
-			info: '08/14 – 05/19'
+	onMount(() => {
+		const hash = window.location.hash?.substring(1);
+		if (hash && pages.includes(hash)) {
+			console.log('onMount', hash);
+			currentPage = hash;
 		}
-	];
-	const contactLinks = [
-		{
-			title: 'linkedin',
-			href: 'https://www.linkedin.com/in/aapeli-haanpuu'
-		},
-		{
-			title: 'github',
-			href: 'https://github.com/aapzu'
-		},
-		{
-			title: 'cv',
-			href: 'https://aapzu.github.io/resume/resume.pdf'
+	});
+
+	const onCurrentPageChange = (newCurrentPage) => {
+		if (typeof window !== 'undefined' && currentPage) {
+			console.log('onCurrentPageChange', newCurrentPage);
+			window.location.hash = currentPage;
 		}
-	];
+	};
+
+	$: onCurrentPageChange(currentPage);
 </script>
 
-<div class="container">
-	<div class="header">
-		<div class="description">
-			<h2 transition:blur>{descriptions[anchor] || anchor}</h2>
-		</div>
+<div class="header">
+	<div class="description">
+		<h2 transition:blur>{descriptions[currentPage] || currentPage}</h2>
 	</div>
-	<div class="content">
-		<div class="section" id="about">
-			<Page {items} {name} {pages} {anchor} />
-		</div>
-		<div class="section" id="experience">
-			<Page links={experienceLinks} {name} {pages} {anchor} />
-		</div>
-		<div class="section" id="contact">
-			<Page links={contactLinks} {name} {pages} {anchor} />
-		</div>
+</div>
+<Content bind:currentPage />
+<div class="footer">
+	<div class="left">
+		<h1>{name}</h1>
 	</div>
-	<div class="footer">
-		<div class="left">
-			<h1>{name}</h1>
-		</div>
-		<div class="right">
-			<PageIndicator {anchor} {pages} />
-		</div>
+	<div class="right">
+		<PageIndicator {currentPage} {pages} />
 	</div>
 </div>
 
-<style>
-	.content,
-	.section,
-	.container {
-		height: 100%;
-	}
-
-	.content {
-		overflow: auto;
-		scroll-snap-type: y mandatory;
-		scroll-behavior: smooth;
-	}
-
-	.section {
-		scroll-snap-align: start;
-	}
-
+<style lang="scss">
 	.header {
 		width: 100%;
 		position: fixed;
@@ -135,10 +73,10 @@
 		align-self: flex-end;
 		text-align: center;
 		margin: 48px 48px 0 0;
-	}
 
-	.description h2 {
-		margin-top: 10px;
+		h2 {
+			margin-top: 10px;
+		}
 	}
 
 	.footer {
@@ -149,30 +87,30 @@
 		bottom: 0;
 		z-index: 2;
 		width: 100%;
-	}
 
-	.footer .left {
-		width: 500px;
-		height: 120px;
-		border-left: 2px solid var(--secondary);
-		border-bottom: 2px solid var(--secondary);
-		margin: 0 0 48px 48px;
-		display: flex;
-		align-items: flex-end;
-	}
+		.left {
+			width: 500px;
+			height: 120px;
+			border-left: 2px solid var(--secondary);
+			border-bottom: 2px solid var(--secondary);
+			margin: 0 0 48px 48px;
+			display: flex;
+			align-items: flex-end;
 
-	.footer .left h1 {
-		margin-bottom: 10px;
-	}
+			h1 {
+				margin-bottom: 10px;
+			}
+		}
 
-	.footer .right {
-		margin: 0 48px 48px 0;
-	}
+		.right {
+			margin: 0 48px 48px 0;
+		}
 
-	.footer h1 {
-		display: inline-block;
-		text-align: center;
-		width: 100%;
+		h1 {
+			display: inline-block;
+			text-align: center;
+			width: 100%;
+		}
 	}
 
 	/* mobile */
@@ -187,16 +125,26 @@
 			margin: 24px 24px 0 0;
 		}
 
-		.footer .left {
-			margin: 0 0 24px 24px;
-		}
+		.footer {
+			.left {
+				margin: 0 0 24px 24px;
 
-		.footer .left h1 {
-			font-size: 24px;
-			text-align: left;
-			margin-left: 16px;
-			padding-bottom: 2px;
-			margin-bottom: 4px;
+				h1 {
+					font-size: 24px;
+					text-align: left;
+					margin-left: 16px;
+					padding-bottom: 2px;
+					margin-bottom: 4px;
+				}
+			}
+
+			.right {
+				position: fixed;
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				margin: 0 22px 0;
+			}
 		}
 
 		.description h2 {
@@ -205,21 +153,5 @@
 			margin-right: 8px;
 			margin-top: 3px;
 		}
-
-		.footer .right {
-			position: fixed;
-			right: 0;
-			top: 50%;
-			transform: translateY(-50%);
-			margin: 0 22px 0;
-		}
-	}
-
-	/* small tablet */
-	@media (max-width: 768px) {
-	}
-
-	/* large tablet */
-	@media (max-width: 992px) {
 	}
 </style>

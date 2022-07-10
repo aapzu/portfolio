@@ -3,14 +3,14 @@
 	import Item from './Item.svelte';
 	import ItemList from './ItemList.svelte';
 
-	export let links = [];
-	export let items = [];
+	export let links;
+	export let items;
 </script>
 
 <div class="content">
 	<div class="links" transition:blur>
-		{#if items.length}
-			<ItemList {items} itemClass="item" itemAmount={3} />
+		{#if items && items.length}
+			<ItemList {items} itemAmount={3} />
 		{:else if links.length}
 			{#each links as link, index}
 				<Item {...link}>{link.title}</Item>

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import cn from 'classnames';
 
-	export let anchor;
+	export let currentPage;
 	export let pages = [];
 </script>
 
@@ -9,7 +9,7 @@
 	{#each pages as page}
 		<a
 			class={cn({
-				selected: anchor === page
+				selected: currentPage === page
 			})}
 			href={`#${page}`}
 		>
