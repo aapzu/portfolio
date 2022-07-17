@@ -18,23 +18,6 @@
 	};
 
 	let currentPage: string;
-
-	onMount(() => {
-		const hash = window.location.hash?.substring(1);
-		if (hash && pages.includes(hash)) {
-			console.log('onMount', hash);
-			currentPage = hash;
-		}
-	});
-
-	const onCurrentPageChange = (newCurrentPage) => {
-		if (typeof window !== 'undefined' && currentPage) {
-			console.log('onCurrentPageChange', newCurrentPage);
-			window.location.hash = currentPage;
-		}
-	};
-
-	$: onCurrentPageChange(currentPage);
 </script>
 
 <div class="header">

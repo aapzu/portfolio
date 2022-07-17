@@ -1,5 +1,11 @@
 <script context="module" lang="ts">
-	export const prerender = true;
+	export function load({ url }) {
+		const currentPage = url.searchParams.get('p') || 'about';
+		console.log(currentPage);
+		return {
+			props: { currentPage }
+		};
+	}
 </script>
 
 <script lang="ts">
@@ -75,15 +81,11 @@
 	let observer: IntersectionObserver;
 
 	onMount(async () => {
-		const hash = window.location.hash?.substring(1);
 		await new Promise((resolve) => {
-			if (hash && hash in sections) {
-				console.log('onMount', hash);
-				currentPage = hash;
-				console.log('scrollIntoView', hash);
-				sections[hash].scrollIntoView({
-					behavior: 'smooth'
-				});
+			if (currentPage && currentPage in sections) {
+				console.log('onMount', currentPage);
+				console.log('scrollIntoView', currentPage);
+				sections[currentPage].scrollIntoView();
 				setTimeout(resolve, 1000);
 			} else {
 				resolve();
@@ -107,6 +109,19 @@
 		observer.observe(sections.experience);
 		observer.observe(sections.contact);
 	});
+
+	const onCurrentPageChange = (newCurrentPage) => {
+		if (typeof window !== 'undefined' && currentPage) {
+			console.log('onCurrentPageChange', newCurrentPage);
+			const url = new URL(window.location.toString());
+			const urlParams = new URLSearchParams(window.location.search);
+			urlParams.set('p', newCurrentPage);
+			url.search = urlParams.toString();
+			window.history.replaceState({}, document.title, url.toString());
+		}
+	};
+
+	$: onCurrentPageChange(currentPage);
 
 	onDestroy(() => {
 		observer?.disconnect();
