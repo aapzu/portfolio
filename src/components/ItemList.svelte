@@ -33,6 +33,3 @@
 {#each indexesToShow as i}
 	<Item>{items[i]}</Item>
 {/each}
-
-<style lang="scss">
-</style>

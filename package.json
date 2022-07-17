@@ -43,7 +43,7 @@
 		"lint-staged": "^13.0.3"
 	},
 	"lint-staged": {
-		"*": "npm run prettier:fix",
+		"*.{js,ts,svelte,yml,json,html,scss,css,txt,md}": "npm run prettier:fix",
 		"*.ts": [
 			"npm run tsc",
 			"npm run eslint:fix"
