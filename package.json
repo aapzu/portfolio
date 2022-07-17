@@ -49,5 +49,9 @@
 			"npm run eslint:fix"
 		],
 		"*.svelte": "npm run eslint:fix"
+	},
+	"engines": {
+		"node": "^16.16.0",
+		"npm": "^8.5.0"
 	}
 }
