@@ -46,7 +46,7 @@
 		position: absolute;
 		content: '';
 		width: calc(100% - 1em);
-		height: 2px;
+		height: 0.125rem;
 		background-color: rgb(255, 62, 0);
 		display: block;
 		bottom: -1px;

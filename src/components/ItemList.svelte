@@ -30,11 +30,9 @@
 	setTimeout(cb, getTimeout());
 </script>
 
-<div>
-	{#each indexesToShow as i}
-		<Item>{items[i]}</Item>
-	{/each}
-</div>
+{#each indexesToShow as i}
+	<Item>{items[i]}</Item>
+{/each}
 
 <style lang="scss">
 </style>

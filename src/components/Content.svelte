@@ -83,8 +83,6 @@
 	onMount(async () => {
 		await new Promise((resolve) => {
 			if (currentPage && currentPage in sections) {
-				console.log('onMount', currentPage);
-				console.log('scrollIntoView', currentPage);
 				sections[currentPage].scrollIntoView();
 				setTimeout(resolve, 1000);
 			} else {
@@ -95,7 +93,6 @@
 			(entries) => {
 				const current = entries.find((e) => e.isIntersecting);
 				if (current) {
-					console.log('element intersecting', current?.target.id);
 					currentPage = current?.target.id;
 				}
 			},
@@ -112,7 +109,6 @@
 
 	const onCurrentPageChange = (newCurrentPage) => {
 		if (typeof window !== 'undefined' && currentPage) {
-			console.log('onCurrentPageChange', newCurrentPage);
 			const url = new URL(window.location.toString());
 			const urlParams = new URLSearchParams(window.location.search);
 			urlParams.set('p', newCurrentPage);

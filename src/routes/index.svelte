@@ -46,8 +46,8 @@
 	}
 
 	.description {
-		height: 120px;
-		width: 500px;
+		height: 7.5rem;
+		width: 30rem;
 		border-color: var(--secondary);
 		border-style: solid;
 		border-width: 2px;
@@ -55,10 +55,10 @@
 		border-bottom-width: 0;
 		align-self: flex-end;
 		text-align: center;
-		margin: 48px 48px 0 0;
+		margin: 3rem 3rem 0 0;
 
 		h2 {
-			margin-top: 10px;
+			margin-top: 0.625rem;
 		}
 	}
 
@@ -72,21 +72,21 @@
 		width: 100%;
 
 		.left {
-			width: 500px;
-			height: 120px;
-			border-left: 2px solid var(--secondary);
-			border-bottom: 2px solid var(--secondary);
-			margin: 0 0 48px 48px;
+			width: 30rem;
+			height: 7.5rem;
+			border-left: 0.125rem solid var(--secondary);
+			border-bottom: 0.125rem solid var(--secondary);
+			margin: 0 0 3rem 3rem;
 			display: flex;
 			align-items: flex-end;
 
 			h1 {
-				margin-bottom: 10px;
+				margin-bottom: 0.625rem;
 			}
 		}
 
 		.right {
-			margin: 0 48px 48px 0;
+			margin: 0 3rem 3rem 0;
 		}
 
 		h1 {
@@ -100,24 +100,24 @@
 	@media (max-width: 576px) {
 		.header .description,
 		.footer .left {
-			height: 32px;
-			width: 240px;
+			height: 2rem;
+			width: 15rem;
 		}
 
 		.header .description {
-			margin: 24px 24px 0 0;
+			margin: 1.5rem 1.5rem 0 0;
 		}
 
 		.footer {
 			.left {
-				margin: 0 0 24px 24px;
+				margin: 0 0 1.5rem 1.5rem;
 
 				h1 {
-					font-size: 24px;
+					font-size: 1.5rem;
 					text-align: left;
-					margin-left: 16px;
-					padding-bottom: 2px;
-					margin-bottom: 4px;
+					margin-left: 1rem;
+					padding-bottom: 0.125rem;
+					margin-bottom: 0.25rem;
 				}
 			}
 
@@ -126,15 +126,15 @@
 				right: 0;
 				top: 50%;
 				transform: translateY(-50%);
-				margin: 0 22px 0;
+				margin: 0 1.5rem 0;
 			}
 		}
 
 		.description h2 {
-			font-size: 16px;
+			font-size: 1rem;
 			text-align: right;
-			margin-right: 8px;
-			margin-top: 3px;
+			margin-right: 0.5rem;
+			margin-top: 0.1875rem;
 		}
 	}
 </style>

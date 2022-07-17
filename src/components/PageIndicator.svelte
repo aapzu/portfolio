@@ -3,6 +3,12 @@
 
 	export let currentPage;
 	export let pages = [];
+
+	const onClick = (e) => {
+		e.preventDefault();
+		const section = document.querySelector(e.target.getAttribute('href'));
+		section?.scrollIntoView();
+	};
 </script>
 
 <div class="page-indicator">
@@ -12,6 +18,7 @@
 				selected: currentPage === page
 			})}
 			href={`#${page}`}
+			on:click={onClick}
 		>
 			{page}
 		</a>
@@ -27,14 +34,14 @@
 		text-decoration: none;
 		text-align: right;
 		color: var(--secondary);
-		font-size: 18px;
+		font-size: 1.125rem;
 	}
 
 	.page-indicator > a::after {
 		content: '';
 		display: inline-block;
-		width: 10px;
-		height: 10px;
+		width: 0.625rem;
+		height: 0.625rem;
 		background: var(--secondary);
 		border-radius: 50%;
 	}
@@ -48,12 +55,12 @@
 	}
 
 	.page-indicator > a:not(:first-child) {
-		margin-top: 14px;
+		margin-top: 0.875rem;
 	}
 
 	@media (max-width: 576px) {
 		.page-indicator {
-			width: 10px;
+			width: 0.625rem;
 		}
 
 		.page-indicator a {
@@ -61,8 +68,8 @@
 		}
 
 		.page-indicator > a::after {
-			width: 8px;
-			height: 8px;
+			width: 0.5rem;
+			height: 0.5rem;
 		}
 	}
 </style>
