@@ -3,12 +3,11 @@
 </script>
 
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { blur } from 'svelte/transition';
 	import Content from '../components/Content.svelte';
 	import PageIndicator from '../components/PageIndicator.svelte';
 
-	const name = 'aapeli haanpuu';
+	const name = 'aapeli haanpuu' as const;
 
 	const pages = ['about', 'experience', 'contact'] as const;
 	const descriptions: Record<typeof pages[number], string> = {
@@ -134,7 +133,7 @@
 			font-size: 1rem;
 			text-align: right;
 			margin-right: 0.5rem;
-			margin-top: 0.1875rem;
+			margin-top: 0.25rem;
 		}
 	}
 </style>
