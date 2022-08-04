@@ -12,8 +12,6 @@
 	import { onMount, onDestroy } from 'svelte';
 	import Page from '../components/Page.svelte';
 
-	export let currentPage;
-
 	let contentRef;
 
 	type DivRef = HTMLDivElement | null;
@@ -23,6 +21,8 @@
 		experience: null,
 		contact: null
 	};
+
+	export let currentPage: keyof typeof sections | undefined = undefined;
 
 	const items = [
 		'javascript',

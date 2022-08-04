@@ -3,8 +3,8 @@
 	import Item from './Item.svelte';
 	import ItemList from './ItemList.svelte';
 
-	export let links;
-	export let items;
+	export let links = [];
+	export let items = [];
 </script>
 
 <div class="content">

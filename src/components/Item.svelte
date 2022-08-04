@@ -2,9 +2,9 @@
 	import cn from 'classnames';
 	import Link from './Link.svelte';
 
-	export let href: string;
-	export let secondary: boolean;
-	export let info: string | undefined;
+	export let href: string | undefined = undefined;
+	export let secondary = false;
+	export let info: string | undefined = undefined;
 </script>
 
 <div class="item">

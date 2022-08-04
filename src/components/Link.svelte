@@ -1,8 +1,8 @@
 <script lang="ts">
 	import cn from 'classnames';
-	export let href;
-	let clazz: string;
-	export let secondary: boolean;
+	export let href: string | undefined = undefined;
+	let clazz: string | undefined = undefined;
+	export let secondary = false;
 	export { clazz as class };
 </script>
 
