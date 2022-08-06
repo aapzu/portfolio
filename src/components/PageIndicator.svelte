@@ -23,7 +23,9 @@
 			href={`#${page}`}
 			on:click|preventDefault={onClick}
 		>
-			{page}
+			<Underlined>
+				{page}
+			</Underlined>
 		</a>
 	{/each}
 </div>

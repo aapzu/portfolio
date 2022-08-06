@@ -143,7 +143,6 @@
 	.content {
 		overflow: auto;
 		scroll-snap-type: y mandatory;
-		scroll-behavior: smooth;
 	}
 
 	.section {

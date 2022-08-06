@@ -1,5 +1,6 @@
 <script lang="ts">
 	import cn from 'classnames';
+	import Underlined from './Underlined.svelte';
 	export let href: string | undefined = undefined;
 	let clazz: string | undefined = undefined;
 	export let secondary = false;
@@ -7,7 +8,9 @@
 </script>
 
 <a {href} class={cn(clazz, { secondary })}>
-	<slot />
+	<Underlined>
+		<slot />
+	</Underlined>
 </a>
 
 <style lang="scss">
@@ -19,22 +22,6 @@
 
 		&.secondary:not(:hover) {
 			color: var(--secondary);
-		}
-
-		&::before {
-			content: '';
-			position: absolute;
-			height: 100%;
-			width: 0;
-			border-bottom: 2px solid var(--primary);
-			transition: width 0.3s ease, left 0s linear;
-			right: 0;
-		}
-
-		&:hover::before {
-			width: 100%;
-			left: 0;
-			transition-delay: 0s, 0.3s;
 		}
 	}
 </style>
