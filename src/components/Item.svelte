@@ -59,7 +59,7 @@
 		}
 
 		.info.secondary {
-			color: var(--secondary);
+			color: var(--secondary-color);
 		}
 	}
 </style>
