@@ -18,7 +18,7 @@ module.exports = {
 		node: true
 	},
 	rules: {
-		"@typescript-eslint/no-explicit-any": "error",
-		"@typescript-eslint/consistent-type-imports": "error"
+		'@typescript-eslint/no-explicit-any': 'error',
+		'@typescript-eslint/consistent-type-imports': 'error'
 	}
 };
