@@ -4,11 +4,11 @@
 	const MIN_TIMEOUT = 1500;
 	const MAX_TIMEOUT = 3000;
 
-	export let items;
-	export let itemAmount;
+	export let items: string[];
+	export let itemAmount: number;
 
 	let next = itemAmount;
-	let currentItem = null;
+	let currentItem: number | null = null;
 
 	const getTimeout = () => Math.random() * (MAX_TIMEOUT - MIN_TIMEOUT) + MIN_TIMEOUT;
 	const getNextItem = () => {
@@ -31,5 +31,5 @@
 </script>
 
 {#each indexesToShow as i}
-	<Item>{items[i]}</Item>
+	<Item item={{ title: items[i] }} />
 {/each}

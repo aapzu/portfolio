@@ -1,15 +1,15 @@
 <script lang="ts">
 	import cn from 'classnames';
+	import type { Item } from '../types';
 	import Link from './Link.svelte';
 
-	export let href: string | undefined = undefined;
-	export let secondary = false;
-	export let info: string | undefined = undefined;
+	export let item: Item;
+	const { href, title, secondary = false, info } = item;
 </script>
 
 <div class="item">
 	<Link {href} {secondary}>
-		<slot />
+		{title}
 	</Link>
 	{#if info}
 		<p class={cn('info', { secondary })}>

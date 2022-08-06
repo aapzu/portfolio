@@ -1,18 +1,21 @@
 <script lang="ts">
 	import cn from 'classnames';
+	import { type Page, PAGES } from '../constants';
+	import type { DOMEvent } from '../types';
 
-	export let currentPage;
-	export let pages = [];
+	export let currentPage: Page;
 
-	const onClick = (e) => {
+	const onClick = (e: DOMEvent<MouseEvent, HTMLAnchorElement>) => {
 		e.preventDefault();
-		const section = document.querySelector(e.target.getAttribute('href'));
+		const href = e.currentTarget.getAttribute('href');
+		if (!href) return;
+		const section = document.querySelector(href);
 		section?.scrollIntoView();
 	};
 </script>
 
 <div class="page-indicator">
-	{#each pages as page}
+	{#each PAGES as page}
 		<a
 			class={cn({
 				selected: currentPage === page
@@ -26,9 +29,6 @@
 </div>
 
 <style lang="scss">
-	.page-indicator {
-	}
-
 	.page-indicator > a {
 		display: block;
 		text-decoration: none;

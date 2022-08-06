@@ -1,28 +1,32 @@
 <script context="module" lang="ts">
-	export function load({ url }) {
+	import type { Load } from '@sveltejs/kit/types';
+	export const load: Load = async ({ url }) => {
 		const currentPage = url.searchParams.get('p') || 'about';
 		console.log(currentPage);
 		return {
 			props: { currentPage }
 		};
-	}
+	};
 </script>
 
 <script lang="ts">
 	import { onMount, onDestroy } from 'svelte';
 	import Page from '../components/Page.svelte';
+	import { PAGES } from '../constants';
+	import type { Page as PageType } from '../constants';
+	import { isPage } from '../utils';
 
-	let contentRef;
+	let contentRef: HTMLDivElement;
 
 	type DivRef = HTMLDivElement | null;
 
-	let sections: { about: DivRef; experience: DivRef; contact: DivRef } = {
+	let sections: Record<PageType, DivRef> = {
 		about: null,
 		experience: null,
 		contact: null
 	};
 
-	export let currentPage: keyof typeof sections | undefined = undefined;
+	export let currentPage: PageType = PAGES[0];
 
 	const items = [
 		'javascript',
@@ -81,9 +85,9 @@
 	let observer: IntersectionObserver;
 
 	onMount(async () => {
-		await new Promise((resolve) => {
+		await new Promise<void>((resolve) => {
 			if (currentPage && currentPage in sections) {
-				sections[currentPage].scrollIntoView();
+				sections[currentPage]?.scrollIntoView();
 				setTimeout(resolve, 1000);
 			} else {
 				resolve();
@@ -92,8 +96,9 @@
 		observer = new IntersectionObserver(
 			(entries) => {
 				const current = entries.find((e) => e.isIntersecting);
-				if (current) {
-					currentPage = current?.target.id;
+				const id = current?.target.id;
+				if (current && isPage(id)) {
+					currentPage = id;
 				}
 			},
 			{
@@ -102,12 +107,14 @@
 				threshold: 0.5
 			}
 		);
-		observer.observe(sections.about);
-		observer.observe(sections.experience);
-		observer.observe(sections.contact);
+		for (const el of Object.values(sections)) {
+			if (el) {
+				observer.observe(el);
+			}
+		}
 	});
 
-	const onCurrentPageChange = (newCurrentPage) => {
+	const onCurrentPageChange = (newCurrentPage: PageType) => {
 		if (typeof window !== 'undefined' && currentPage) {
 			const url = new URL(window.location.toString());
 			const urlParams = new URLSearchParams(window.location.search);
@@ -117,7 +124,9 @@
 		}
 	};
 
-	$: onCurrentPageChange(currentPage);
+	$: if (currentPage) {
+		onCurrentPageChange(currentPage);
+	}
 
 	onDestroy(() => {
 		observer?.disconnect();

@@ -6,17 +6,17 @@
 	import { blur } from 'svelte/transition';
 	import Content from '../components/Content.svelte';
 	import PageIndicator from '../components/PageIndicator.svelte';
+	import type { Page } from '../constants';
 
-	const name = 'aapeli haanpuu' as const;
+	const name = 'aapeli haanpuu';
 
-	const pages = ['about', 'experience', 'contact'] as const;
-	const descriptions: Record<typeof pages[number], string> = {
+	const descriptions: Record<Page, string> = {
 		about: 'what do I do?',
 		experience: 'my work history',
 		contact: 'how to contact me'
 	};
 
-	let currentPage: string;
+	let currentPage: Page;
 </script>
 
 <div class="header">
@@ -30,7 +30,7 @@
 		<h1>{name}</h1>
 	</div>
 	<div class="right">
-		<PageIndicator {currentPage} {pages} />
+		<PageIndicator {currentPage} />
 	</div>
 </div>
 

@@ -1,10 +1,15 @@
+<script lang="ts" context="module">
+	export const Foo = 'bar';
+</script>
+
 <script lang="ts">
 	import { blur } from 'svelte/transition';
+	import type { Item as ItemType } from '../types';
 	import Item from './Item.svelte';
 	import ItemList from './ItemList.svelte';
 
-	export let links = [];
-	export let items = [];
+	export let links: Array<ItemType> = [];
+	export let items: Array<string> = [];
 </script>
 
 <div class="content">
@@ -12,8 +17,8 @@
 		{#if items && items.length}
 			<ItemList {items} itemAmount={3} />
 		{:else if links.length}
-			{#each links as link, index}
-				<Item {...link}>{link.title}</Item>
+			{#each links as link}
+				<Item item={link} />
 			{/each}
 		{/if}
 	</div>
