@@ -2,15 +2,15 @@
 	import cn from 'classnames';
 	import { type Page, PAGES } from '../constants';
 	import type { DOMEvent } from '../types';
+	import Underlined from './Underlined.svelte';
 
 	export let currentPage: Page;
 
 	const onClick = (e: DOMEvent<MouseEvent, HTMLAnchorElement>) => {
-		e.preventDefault();
 		const href = e.currentTarget.getAttribute('href');
 		if (!href) return;
 		const section = document.querySelector(href);
-		section?.scrollIntoView();
+		section?.scrollIntoView({ behavior: 'smooth' });
 	};
 </script>
 
@@ -21,7 +21,7 @@
 				selected: currentPage === page
 			})}
 			href={`#${page}`}
-			on:click={onClick}
+			on:click|preventDefault={onClick}
 		>
 			{page}
 		</a>

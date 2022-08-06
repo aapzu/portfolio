@@ -1,14 +1,3 @@
-<script context="module" lang="ts">
-	import type { Load } from '@sveltejs/kit/types';
-	export const load: Load = async ({ url }) => {
-		const currentPage = url.searchParams.get('p') || 'about';
-		console.log(currentPage);
-		return {
-			props: { currentPage }
-		};
-	};
-</script>
-
 <script lang="ts">
 	import { onMount, onDestroy } from 'svelte';
 	import Page from '../components/Page.svelte';
@@ -26,7 +15,7 @@
 		contact: null
 	};
 
-	export let currentPage: PageType = PAGES[0];
+	export let currentPage: PageType;
 
 	const items = [
 		'javascript',
