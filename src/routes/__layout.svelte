@@ -30,7 +30,6 @@
 		html {
 			height: 300%;
 			margin-top: -100%;
-			scrollbar-width: none;
 		}
 
 		body,
@@ -63,7 +62,7 @@
 		}
 
 		h1 {
-			font-size: 2.5rem;
+			font-size: 2.25rem;
 		}
 
 		h2 {

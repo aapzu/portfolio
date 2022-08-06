@@ -143,6 +143,10 @@
 	.content {
 		overflow: auto;
 		scroll-snap-type: y mandatory;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
 	}
 
 	.section {
