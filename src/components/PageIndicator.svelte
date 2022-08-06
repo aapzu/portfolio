@@ -37,41 +37,42 @@
 		text-align: right;
 		color: var(--secondary-color);
 		font-size: 1.125rem;
-	}
+		white-space: nowrap;
 
-	.page-indicator > a::after {
-		content: '';
-		display: inline-block;
-		width: 0.625rem;
-		height: 0.625rem;
-		background: var(--secondary-color);
-		border-radius: 50%;
-	}
+		&::after {
+			content: '';
+			display: inline-block;
+			width: 0.625rem;
+			height: 0.625rem;
+			background: var(--secondary-color);
+			border-radius: 50%;
+		}
 
-	.page-indicator > a.selected {
-		color: var(--primary-color);
-	}
+		&.selected {
+			color: var(--primary-color);
 
-	.page-indicator > a.selected::after {
-		background: var(--primary-color);
-	}
+			&::after {
+				background: var(--primary-color);
+			}
+		}
 
-	.page-indicator > a:not(:first-child) {
-		margin-top: 0.875rem;
+		&:not(:first-child) {
+			margin-top: 0.875rem;
+		}
 	}
 
 	@media (max-width: 576px) {
 		.page-indicator {
 			width: 0.625rem;
-		}
 
-		.page-indicator a {
-			font-size: 0;
-		}
+			> a {
+				font-size: 0;
 
-		.page-indicator > a::after {
-			width: 0.5rem;
-			height: 0.5rem;
+				&::after {
+					width: 0.5rem;
+					height: 0.5rem;
+				}
+			}
 		}
 	}
 </style>

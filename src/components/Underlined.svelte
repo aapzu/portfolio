@@ -1,4 +1,4 @@
-<span class="underlined" role="presentation">
+<span class="underlined">
 	<slot />
 </span>
 

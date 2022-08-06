@@ -19,26 +19,30 @@
 </div>
 
 <style lang="scss">
-	.info {
-		position: relative;
-		font-size: 1rem;
-		margin-top: 0.5rem;
-		top: 1rem;
-		opacity: 0;
-		transition: top 0.2s ease, opacity 0.2s ease;
-		overflow: hidden;
-	}
-
 	.item {
+		position: relative;
 		margin: 0 1rem;
 		display: inline-block;
 		font-size: 1.5rem;
 		text-align: center;
 
 		&:hover .info {
-			top: 0;
+			top: 100%;
 			opacity: 1;
 		}
+	}
+
+	.info {
+		white-space: nowrap;
+		position: absolute;
+		font-size: 1rem;
+		margin-top: 0.5rem;
+		top: calc(100% + 1rem);
+		left: 50%;
+		transform: translateX(-50%);
+		opacity: 0;
+		transition: top 0.2s ease, opacity 0.2s ease;
+		overflow: hidden;
 	}
 
 	/* mobile */
