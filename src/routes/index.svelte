@@ -1,7 +1,6 @@
 <script context="module" lang="ts">
 	import type { Load } from '@sveltejs/kit/types';
 
-	export const prerender = true;
 	export const load: Load = async ({ url }) => {
 		const currentPage = url.searchParams.get('p');
 		return {
