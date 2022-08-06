@@ -12,7 +12,7 @@
 			position: absolute;
 			height: 100%;
 			width: 0;
-			border-bottom: 2px solid var(--primary);
+			border-bottom: 2px solid var(--primary-color);
 			transition: width 0.3s ease, left 0s linear;
 			right: 0;
 		}

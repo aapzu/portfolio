@@ -25,12 +25,6 @@
 </div>
 
 <style lang="scss">
-	:root {
-		--background: #010a43;
-		--primary: #ff3f98;
-		--secondary: #f3d3d3;
-	}
-
 	.content {
 		flex: 1;
 		display: flex;

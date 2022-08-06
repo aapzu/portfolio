@@ -1,28 +1,28 @@
 <script lang="ts">
 	import '@fontsource/roboto-mono';
+	import PageBackground from '../components/PageBackground.svelte';
 </script>
 
 <svelte:head>
 	<title>Aapeli Haanpuu</title>
 </svelte:head>
 
-<main>
+<PageBackground class="main-content">
 	<slot />
-</main>
+</PageBackground>
 
 <style lang="scss">
 	:global {
 		:root {
-			--background: #010a43;
-			--primary: #ff3f98;
-			--secondary: #f3d3d3;
+			--primary-color: #ed254e;
+			--secondary-color: #eaf2ef;
 		}
 
-		main {
+		.main-content {
 			display: flex;
 			flex-direction: column;
 			background-color: var(--background);
-			color: var(--primary);
+			color: var(--primary-color);
 			height: 100%;
 			width: 100%;
 		}

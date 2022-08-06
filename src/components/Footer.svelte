@@ -29,8 +29,8 @@
 		.left {
 			width: 30rem;
 			height: 7.5rem;
-			border-left: 0.125rem solid var(--secondary);
-			border-bottom: 0.125rem solid var(--secondary);
+			border-left: 0.125rem solid var(--secondary-color);
+			border-bottom: 0.125rem solid var(--secondary-color);
 			margin: 0 0 3rem 3rem;
 			display: flex;
 			align-items: flex-end;

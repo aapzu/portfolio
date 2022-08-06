@@ -15,13 +15,13 @@
 
 <style lang="scss">
 	a {
-		color: var(--primary);
+		color: var(--primary-color);
 		text-decoration: none;
 		display: inline-block;
 		position: relative;
 
 		&.secondary:not(:hover) {
-			color: var(--secondary);
+			color: var(--secondary-color);
 		}
 	}
 </style>

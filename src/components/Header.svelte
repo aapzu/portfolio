@@ -30,7 +30,7 @@
 	.description {
 		height: 7.5rem;
 		width: 30rem;
-		border-color: var(--secondary);
+		border-color: var(--secondary-color);
 		border-style: solid;
 		border-width: 2px;
 		border-left-width: 0;
