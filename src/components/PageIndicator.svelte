@@ -33,7 +33,7 @@
 		display: block;
 		text-decoration: none;
 		text-align: right;
-		color: var(--secondary);
+		color: var(--secondary-color);
 		font-size: 1.125rem;
 	}
 
@@ -42,16 +42,16 @@
 		display: inline-block;
 		width: 0.625rem;
 		height: 0.625rem;
-		background: var(--secondary);
+		background: var(--secondary-color);
 		border-radius: 50%;
 	}
 
 	.page-indicator > a.selected {
-		color: var(--primary);
+		color: var(--primary-color);
 	}
 
 	.page-indicator > a.selected::after {
-		background: var(--primary);
+		background: var(--primary-color);
 	}
 
 	.page-indicator > a:not(:first-child) {
