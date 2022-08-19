@@ -38,11 +38,15 @@
 	];
 	const experienceLinks = [
 		{
+			title: 'hoxhunt',
+			href: 'https://www.hoxhunt.com/',
+			info: '08/22 – current'
+		},
+		{
 			title: 'swappie',
 			href: 'https://www.swappie.com',
-			info: '03/21 – current'
+			info: '03/21 – 08/22'
 		},
-
 		{
 			title: 'gofore',
 			href: 'https://www.gofore.com',
