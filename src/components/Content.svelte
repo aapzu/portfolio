@@ -45,6 +45,7 @@
 		{
 			title: 'swappie',
 			href: 'https://www.swappie.com',
+			secondary: true,
 			info: '03/21 – 08/22'
 		},
 		{
