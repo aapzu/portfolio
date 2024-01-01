@@ -72,7 +72,7 @@
 		},
 		{
 			title: 'cv',
-			href: 'https://aapzu.github.io/resume/resume.pdf'
+			href: 'https://docs.google.com/viewer?url=https://github.com/aapzu/resume/releases/latest/download/resume.pdf'
 		}
 	];
 
