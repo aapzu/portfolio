@@ -15,8 +15,8 @@ devDependencies:
     specifier: 1.0.0-next.53
     version: 1.0.0-next.53
   '@sveltejs/kit':
-    specifier: 1.0.0-next.579
-    version: 1.0.0-next.579(svelte@3.49.0)(vite@5.0.10)
+    specifier: 1.0.0
+    version: 1.0.0(svelte@3.49.0)(vite@5.0.10)
   '@types/cookie':
     specifier: 0.5.1
     version: 0.5.1
@@ -576,8 +576,8 @@ packages:
       - supports-color
     dev: true
 
-  /@sveltejs/kit@1.0.0-next.579(svelte@3.49.0)(vite@5.0.10):
-    resolution: {integrity: sha512-DPtXdIuQsByeZWT0O0DUfKZRtIJ4xlIVeLy+Of7OfomNtKNrMU0cW5/EWEWvrF2TrwUrGAVXv7lkk9QCbqWpXw==}
+  /@sveltejs/kit@1.0.0(svelte@3.49.0)(vite@5.0.10):
+    resolution: {integrity: sha512-6VgD5C3i2XOT7GRBi5LaPPLiFAmpiDkhKJNVt8fLg1RmaL6f7rT4Kiwi2XGpYRj3V1F4t1QRdsfmAkkDUKY3OA==}
     engines: {node: '>=16.14'}
     hasBin: true
     requiresBuild: true
@@ -589,6 +589,7 @@ packages:
       '@types/cookie': 0.5.1
       cookie: 0.5.0
       devalue: 4.3.2
+      esm-env: 1.0.0
       kleur: 4.1.5
       magic-string: 0.27.0
       mime: 3.0.0
@@ -1711,6 +1712,10 @@ packages:
       - supports-color
     dev: true
 
+  /esm-env@1.0.0:
+    resolution: {integrity: sha512-Cf6VksWPsTuW01vU9Mk/3vRue91Zevka5SjyNf3nEpokFRuqt/KjUQoGAwq9qMmhpLTHmXzSIrFRw8zxWzmFBA==}
+    dev: true
+
   /espree@9.3.2:
     resolution: {integrity: sha512-D211tC7ZwouTIuY5x9XnS0E9sWNChB7IYKX/Xp5eQj3nFXhqmiUDB9q27y76oFl8jTg3pXcQx/bpxMfs3CIZbA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -2412,7 +2417,7 @@ packages:
     resolution: {integrity: sha512-8UnnX2PeRAPZuN12svgR9j7M1uWMovg/CEnIwIG0LFkXSJJe4PdfUGiTGl8V9bsBHFUtfVINcSyYxd7q+kx9fA==}
     engines: {node: '>=12'}
     dependencies:
-      '@jridgewell/sourcemap-codec': 1.4.14
+      '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
 
   /magic-string@0.30.5:
