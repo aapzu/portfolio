@@ -13,7 +13,7 @@
 
 <div class="header">
 	<div class="description">
-		<h2 transition:blur>{descriptions[currentPage]}</h2>
+		<h2 transition:blur|global>{descriptions[currentPage]}</h2>
 	</div>
 </div>
 

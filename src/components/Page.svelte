@@ -13,7 +13,7 @@
 </script>
 
 <div class="content">
-	<div class="links" transition:blur>
+	<div class="links" transition:blur|global>
 		{#if items && items.length}
 			<ItemList {items} itemAmount={3} />
 		{:else if links.length}
