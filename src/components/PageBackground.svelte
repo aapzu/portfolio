@@ -1,7 +1,6 @@
 <script lang="ts">
 	import cn from 'classnames';
 
-	let main: HTMLMapElement;
 	let gradientX = 30;
 	let gradientY = 70;
 
@@ -11,7 +10,6 @@
 
 <main
 	class={cn('page-background', clazz)}
-	bind:this={main}
 	style="--gradient-location-x: {gradientX}%; --gradient-location-y: {gradientY}%;"
 >
 	<slot />

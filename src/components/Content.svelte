@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { onMount, onDestroy } from 'svelte';
 	import Page from '../components/Page.svelte';
-	import { PAGES } from '../constants';
 	import type { Page as PageType } from '../constants';
 	import { isPage } from '../utils';
 
