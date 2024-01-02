@@ -1,7 +1,3 @@
-<script lang="ts" context="module">
-	export const Foo = 'bar';
-</script>
-
 <script lang="ts">
 	import { blur } from 'svelte/transition';
 	import type { Item as ItemType } from '../types';
